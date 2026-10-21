@@ -202,6 +202,7 @@ img {
   padding: 28px 0 12px;
 }
 
+/* GLASS METADATA BOXES */
 
 .hero-meta {
   display: grid;
@@ -214,18 +215,24 @@ img {
   min-width: 0;
   min-height: 94px;
   padding: 17px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, .85);
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, .58);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 5px 18px rgba(32, 59, 98, 0.06);
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 18px rgba(32, 59, 98, .06);
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease;
 }
 
 .hero-meta > div:hover {
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 7px 22px rgba(32, 59, 98, 0.09);
+  background: rgba(220, 230, 217, .82);
+  border-color: rgba(71, 116, 86, .55);
+  box-shadow: 0 8px 24px rgba(71, 116, 86, .16);
+  transform: translateY(-3px);
 }
 
 .hero-meta small,
@@ -237,7 +244,7 @@ img {
   color: var(--burgundy);
   font-size: 11px;
   font-weight: 800;
-  letter-spacing: 0.09em;
+  letter-spacing: .09em;
   margin-bottom: 8px;
 }
 
@@ -655,7 +662,8 @@ h3 {
   }
 
   .hero-meta > div {
-    padding: 10px 13px;
+    min-height: 0;
+    padding: 12px 14px;
   }
 
   h1 {
