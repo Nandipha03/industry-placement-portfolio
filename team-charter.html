@@ -3,235 +3,256 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Agile Team Charter for the JICS ICCV Digital Platform Management project.">
+
+  <meta
+    name="description"
+    content="Agile Team Charter for the JICS ICCV Digital Platform Management project."
+  >
+
   <title>Agile Team Charter | Nandipha Galada</title>
+
   <link rel="stylesheet" href="style.css">
+
   <style>
     .charter-page {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 38px 28px 60px;
+      padding: 32px 22px 55px;
+      color: #292d35;
+      line-height: 1.7;
     }
 
     .charter-top {
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
 
-    .charter-top a {
-      color: var(--burgundy);
-      text-decoration: none;
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #203b62;
       font-weight: 600;
+      text-decoration: none;
     }
 
-    .charter-top a:hover {
+    .back-link:hover {
+      color: #963f4c;
       text-decoration: underline;
     }
 
     .charter-heading {
-      padding: 36px;
-      margin-bottom: 24px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #203B62, #172B47);
-      color: #fff;
-      box-shadow: 0 12px 30px rgba(23, 43, 71, 0.12);
+      padding: 38px;
+      margin-bottom: 25px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #203b62, #172b47);
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(32, 59, 98, 0.15);
     }
 
-    .charter-heading .eyebrow {
-      color: #E6C5CA;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: .13em;
+    .charter-label {
+      margin: 0 0 10px;
+      color: #dce6d9;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
       text-transform: uppercase;
     }
 
     .charter-heading h1 {
-      margin: 12px 0;
-      color: #fff;
-      font-size: clamp(30px, 5vw, 44px);
-      line-height: 1.15;
+      margin: 0 0 12px;
+      color: #ffffff;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.2;
     }
 
     .charter-heading p {
-      max-width: 720px;
-      color: rgba(255, 255, 255, .84);
-      line-height: 1.8;
+      max-width: 750px;
+      margin: 0;
+      color: #f1f3f7;
     }
 
     .charter-meta {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 26px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
     }
 
-    .charter-meta div {
-      padding: 14px 16px;
-      border: 1px solid rgba(255, 255, 255, .2);
+    .meta-card {
+      padding: 17px;
+      background: #ffffff;
+      border: 1px solid #e5e2da;
       border-radius: 12px;
-      background: rgba(255, 255, 255, .08);
-    }
-
-    .charter-meta small,
-    .charter-meta strong {
-      display: block;
-    }
-
-    .charter-meta small {
-      margin-bottom: 6px;
-      color: #E6C5CA;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .1em;
-    }
-
-    .charter-meta strong {
-      color: #fff;
-      font-size: 13px;
-      line-height: 1.6;
+      box-shadow: 0 4px 14px rgba(23, 43, 71, 0.04);
       overflow-wrap: anywhere;
     }
 
+    .meta-card span {
+      display: block;
+      margin-bottom: 5px;
+      color: #73766f;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    .meta-card strong {
+      color: #203b62;
+      font-size: 0.95rem;
+    }
+
     .charter-notice {
-      padding: 15px 18px;
       margin-bottom: 24px;
-      border-left: 4px solid var(--burgundy);
+      padding: 16px 19px;
+      background: #f1f5ef;
+      border-left: 4px solid #71866a;
       border-radius: 8px;
-      background: #fff;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.7;
+    }
+
+    .charter-notice strong {
+      color: #405b40;
     }
 
     .charter-section {
-      padding: 26px 28px;
-      margin-bottom: 18px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--paper);
-      box-shadow: 0 5px 18px rgba(32, 59, 98, .04);
+      margin-bottom: 22px;
+      padding: 26px;
+      background: #ffffff;
+      border: 1px solid #e5e2da;
+      border-radius: 15px;
+      box-shadow: 0 5px 18px rgba(23, 43, 71, 0.04);
     }
 
     .charter-section h2 {
       margin: 0 0 15px;
-      color: var(--navy-dark);
-      font-size: 21px;
-      line-height: 1.4;
+      padding-bottom: 10px;
+      color: #203b62;
+      font-size: 1.35rem;
+      border-bottom: 1px solid #e5e2da;
     }
 
     .charter-section h3 {
-      margin: 20px 0 8px;
-      color: var(--burgundy);
-      font-size: 15px;
-    }
-
-    .charter-section p,
-    .charter-section li {
-      color: var(--ink);
-      font-size: 14px;
-      line-height: 1.85;
+      margin: 22px 0 8px;
+      color: #963f4c;
+      font-size: 1.05rem;
     }
 
     .charter-section p {
-      margin: 0 0 12px;
+      margin: 0 0 13px;
     }
 
     .charter-section p:last-child {
       margin-bottom: 0;
     }
 
-    .charter-section ul {
-      padding-left: 22px;
+    .charter-section ul,
+    .charter-section ol {
+      padding-left: 24px;
       margin: 10px 0 0;
     }
 
     .charter-section li {
-      margin-bottom: 7px;
-      padding-left: 3px;
+      margin-bottom: 8px;
     }
 
-    .charter-table-wrap {
+    .table-wrapper {
       width: 100%;
       overflow-x: auto;
+      margin-top: 15px;
+      border: 1px solid #e5e2da;
+      border-radius: 10px;
     }
 
     .charter-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 12px;
-      font-size: 13px;
-    }
-
-    .charter-table th,
-    .charter-table td {
-      padding: 13px 14px;
-      border: 1px solid var(--line);
+      font-size: 0.92rem;
       text-align: left;
-      vertical-align: top;
-      line-height: 1.7;
     }
 
     .charter-table th {
-      background: #F0F2F5;
-      color: var(--navy-dark);
-      font-weight: 700;
+      padding: 13px 14px;
+      color: #ffffff;
+      background: #203b62;
+      font-weight: 600;
     }
 
     .charter-table td {
-      color: var(--ink);
+      padding: 13px 14px;
+      border-bottom: 1px solid #e5e2da;
+      vertical-align: top;
     }
 
-    .charter-phase {
-      padding: 17px 18px;
-      margin-top: 12px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: #fff;
+    .charter-table tbody tr:nth-child(even) {
+      background: #f8f6f2;
     }
 
-    .charter-phase h3 {
-      margin: 0 0 7px;
+    .charter-table tbody tr:last-child td {
+      border-bottom: none;
     }
 
-    .charter-phase p {
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 18px;
+    }
+
+    .phase-card {
+      padding: 19px;
+      background: #f8f6f2;
+      border: 1px solid #e5e2da;
+      border-top: 4px solid #963f4c;
+      border-radius: 10px;
+    }
+
+    .phase-card:nth-child(2) {
+      border-top-color: #71866a;
+    }
+
+    .phase-card:nth-child(3) {
+      border-top-color: #203b62;
+    }
+
+    .phase-card h3 {
+      margin: 0 0 9px;
+      color: #203b62;
+    }
+
+    .phase-card p {
       margin: 0;
+      font-size: 0.93rem;
     }
 
     .charter-footer {
-      padding: 20px 0 0;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.7;
+      padding: 22px 10px 0;
+      color: #73766f;
       text-align: center;
+      font-size: 0.85rem;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
       .charter-page {
-        padding: 24px 16px 40px;
+        padding: 22px 14px 40px;
       }
 
       .charter-heading {
-        padding: 25px 21px;
+        padding: 27px 22px;
       }
 
-      .charter-meta {
+      .charter-meta,
+      .phase-grid {
         grid-template-columns: 1fr;
       }
 
       .charter-section {
-        padding: 21px 19px;
-      }
-
-      .charter-section h2 {
-        font-size: 19px;
+        padding: 20px 17px;
       }
     }
 
     @media print {
-      .charter-top,
-      .sidebar,
-      nav,
-      .menu-toggle {
-        display: none !important;
+      .charter-top {
+        display: none;
       }
 
       .charter-page {
@@ -241,14 +262,14 @@
 
       .charter-heading,
       .charter-section,
-      .charter-phase {
+      .meta-card,
+      .phase-card {
         box-shadow: none;
         break-inside: avoid;
       }
 
-      .charter-heading {
-        print-color-adjust: exact;
-        -webkit-print-color-adjust: exact;
+      .charter-section {
+        margin-bottom: 14px;
       }
     }
   </style>
@@ -258,301 +279,481 @@
   <main class="charter-page">
 
     <div class="charter-top">
-      <a href="index.html">&larr; Back to portfolio</a>
+      <a class="back-link" href="index.html">
+        &larr; Back to portfolio
+      </a>
     </div>
 
     <header class="charter-heading">
-      <p class="eyebrow">JICS Workplace Project</p>
-      <h1>Agile Team Charter</h1>
-      <p>
-        Establishing a shared direction for improving operational processes
-        through practical, user-centred digital solutions.
-      </p>
+      <p class="charter-label">Professional Practice 3 · JICS</p>
 
-      <div class="charter-meta">
-        <div>
-          <small>PROJECT</small>
-          <strong>ICCV Digital Platform Management</strong>
-        </div>
-        <div>
-          <small>ORGANISATION</small>
-          <strong>Judicial Inspectorate for Correctional Services (JICS)</strong>
-        </div>
-        <div>
-          <small>DOCUMENT STATUS</small>
-          <strong>Working Draft — for review</strong>
-        </div>
-        <div>
-          <small>PORTFOLIO OWNER</small>
-          <strong>Nandipha Galada</strong>
-        </div>
-      </div>
+      <h1>Agile Team Charter</h1>
+
+      <p>
+        Establishing a shared understanding of the project purpose,
+        team collaboration, stakeholder involvement and proposed
+        approach to improving workplace processes through digital solutions.
+      </p>
     </header>
 
-    <div class="charter-notice">
-      This charter is a working draft based on the information currently
-      available. Project roles, scope and proposed activities must be
-      confirmed with the relevant JICS project stakeholders before
-      this document is treated as final.
-    </div>
+    <section class="charter-meta" aria-label="Project information">
+      <div class="meta-card">
+        <span>Project</span>
+        <strong>ICCV Digital Platform Management</strong>
+      </div>
+
+      <div class="meta-card">
+        <span>Organisation</span>
+        <strong>Judicial Inspectorate for Correctional Services (JICS)</strong>
+      </div>
+
+      <div class="meta-card">
+        <span>Document status</span>
+        <strong>Working Draft — For Review</strong>
+      </div>
+    </section>
+
+    <aside class="charter-notice">
+      <strong>Document purpose:</strong>
+      This charter outlines the team's current understanding of the
+      project. The proposed solution, individual responsibilities and
+      final scope remain subject to discussion and confirmation by the
+      relevant project stakeholders.
+    </aside>
 
     <section class="charter-section">
-      <h2>01. Project Purpose</h2>
+      <h2>1. Project Purpose</h2>
+
       <p>
-        The purpose of the ICCV Digital Platform Management project is
-        to support the digital transformation of operational processes
-        within JICS by reducing unnecessary paperwork and introducing
-        more efficient electronic ways of working.
+        The project aims to investigate how selected operational
+        processes involving ICCVs can be improved through appropriate
+        digital solutions. Some processes currently rely on paper
+        registers, forms and dockets, which may need to be completed,
+        transported, scanned or emailed before information can be accessed
+        by the relevant staff.
       </p>
+
       <p>
-        Some operational activities require forms and documents to be
-        completed on paper before being scanned, stored or shared
-        electronically. This can create additional administrative work
-        and make information more difficult to manage.
-      </p>
-      <p>
-        The project aims to identify suitable processes for digitisation
-        while retaining physical documentation wherever it remains
-        necessary.
+        The team will explore opportunities to reduce unnecessary
+        paperwork, improve the handling of information and support
+        more efficient document submission, storage and retrieval,
+        while retaining physical documentation wherever it is required.
       </p>
     </section>
 
     <section class="charter-section">
-      <h2>02. Project Vision</h2>
+      <h2>2. Project Vision</h2>
+
       <p>
-        The vision is to develop a practical, accessible and user-friendly
-        digital platform that enables ICCVs and relevant JICS personnel
-        to complete suitable operational tasks electronically.
+        The vision is to work towards a practical and user-friendly
+        digital solution that supports ICCVs and relevant JICS staff
+        in completing work-related processes more efficiently.
       </p>
+
       <p>
-        The proposed solution should support electronic information
-        capture, organised record storage and retrieval, document sharing,
-        progress tracking and reduced administrative effort.
-      </p>
-      <p>
-        The platform should be shaped around users' real working needs,
-        ensuring that the technology is practical, understandable and
-        appropriate for the operational environment.
+        The proposed solution should consider the actual working
+        environment, access to technology, ease of use, information
+        security and the needs of the people who will use the system.
       </p>
     </section>
 
     <section class="charter-section">
-      <h2>03. Project Objectives</h2>
+      <h2>3. Project Objectives</h2>
+
+      <p>The project team aims to:</p>
+
       <ul>
-        <li>Reduce unnecessary printing, scanning and physical handling of documents.</li>
-        <li>Enable electronic completion, storage and sharing of suitable forms and records.</li>
-        <li>Support electronic signatures where appropriate and authorised.</li>
-        <li>Improve the organisation and retrieval of information through structured digital records and databases.</li>
-        <li>Improve the tracking and management of complaints and inspection-related processes.</li>
-        <li>Explore opportunities to digitise other relevant administrative activities, including procurement-related documentation.</li>
-        <li>Make effective use of available tablets and other suitable technology.</li>
-        <li>Collect user feedback to ensure the proposed solution meets operational needs.</li>
+        <li>
+          Investigate existing work processes and identify challenges
+          associated with paper-based documentation.
+        </li>
+        <li>
+          Understand how ICCVs complete, submit and access work-related
+          forms and information.
+        </li>
+        <li>
+          Explore opportunities to complete and submit suitable
+          documentation electronically using available technology.
+        </li>
+        <li>
+          Consider appropriate digital document storage and retrieval
+          methods to improve access to information.
+        </li>
+        <li>
+          Explore a prototype that can help assess usability and
+          gather feedback before wider implementation is considered.
+        </li>
+        <li>
+          Consider a longer-term integrated platform, subject to
+          technical feasibility, stakeholder requirements and approval.
+        </li>
       </ul>
     </section>
 
     <section class="charter-section">
-      <h2>04. Project Team and Stakeholders</h2>
+      <h2>4. Project Team and Stakeholders</h2>
+
       <p>
-        Based on the current understanding, the project involves
-        approximately six people: a project representative or lead,
-        two IT personnel and three interns. ICCVs and other relevant
-        operational personnel are important stakeholders because
-        their needs will inform the proposed solution.
+        The project team consists of the Project Manager, IT personnel
+        and three IT interns. Team members contribute through their
+        respective roles, discussions and involvement in project-related
+        activities.
       </p>
 
-      <div class="charter-table-wrap">
+      <div class="table-wrapper">
         <table class="charter-table">
           <thead>
             <tr>
-              <th>Team member or group</th>
-              <th>Expected contribution</th>
+              <th scope="col">Team Member</th>
+              <th scope="col">Role</th>
+              <th scope="col">Contribution</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td>Mr Sani</td>
-              <td>Provides project direction and represents the project in broader discussions. His formal title and responsibilities require confirmation.</td>
+              <td>Project Manager</td>
+              <td>
+                Provides project direction and supports the coordination
+                of project activities.
+              </td>
             </tr>
+
             <tr>
-              <td>Two IT personnel</td>
-              <td>Contribute technical knowledge, guidance and input on the feasibility of proposed digital solutions.</td>
+              <td>Mr Madikizela</td>
+              <td>IT Manager</td>
+              <td>
+                Provides IT management input and guidance on relevant
+                technical considerations.
+              </td>
             </tr>
+
             <tr>
-              <td>Three interns</td>
-              <td>Collaborate to investigate current challenges, analyse requirements, explore possible solutions and contribute ideas from an IT perspective.</td>
+              <td>Mr Nene</td>
+              <td>IT Assistant</td>
+              <td>
+                Contributes IT support and practical technical input
+                relevant to the workplace.
+              </td>
             </tr>
+
             <tr>
-              <td>ICCVs and relevant operational personnel</td>
-              <td>Provide information about current processes, practical challenges and user requirements, and feedback on the suitability of proposed solutions.</td>
+              <td>Nandipha Galada</td>
+              <td>IT Intern</td>
+              <td>
+                Participates in investigating workplace challenges
+                and exploring potential digital solutions.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Asive Toto</td>
+              <td>IT Intern</td>
+              <td>
+                Collaborates with the team on project-related
+                investigations and activities.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Petros Letswalo</td>
+              <td>IT Intern</td>
+              <td>
+                Collaborates with the team on project-related
+                investigations and activities.
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <p style="margin-top: 14px;">
-        Individual responsibilities and the formal project structure
-        should be confirmed with the project lead.
+      <h3>Key Stakeholders</h3>
+
+      <p>
+        ICCVs and relevant operational staff are important stakeholders
+        because they understand the daily processes that the proposed
+        solution is intended to support. Their experiences, requirements
+        and feedback should inform the project's direction.
+      </p>
+
+      <p>
+        Other relevant JICS personnel may also be consulted where their
+        input is required to assess operational requirements, technical
+        feasibility, access permissions or information-handling practices.
       </p>
     </section>
 
     <section class="charter-section">
-      <h2>05. Proposed Project Approach</h2>
+      <h2>5. Proposed Project Approach</h2>
+
       <p>
-        The project is expected to follow a phased approach, allowing
-        the team to explore immediate improvements while working towards
-        a more integrated long-term solution.
+        The project is being considered in three broad phases.
+        These phases represent the current proposed direction and
+        are not confirmation that each solution has been approved
+        or implemented.
       </p>
 
-      <div class="charter-phase">
-        <h3>Short term — SharePoint solution</h3>
-        <p>
-          Explore a SharePoint-based solution to improve access to and
-          sharing of relevant project information and resources.
-        </p>
-      </div>
+      <div class="phase-grid">
+        <article class="phase-card">
+          <h3>Short-Term</h3>
 
-      <div class="charter-phase">
-        <h3>Medium term — Prototype development</h3>
-        <p>
-          Develop a prototype to demonstrate the proposed solution,
-          explore user interaction and gather feedback before further
-          development.
-        </p>
-      </div>
+          <p>
+            Explore a SharePoint-based solution for sharing and accessing
+            relevant project information. Access challenges, including
+            ICCVs' ability to access Outlook or email, must be considered.
+          </p>
+        </article>
 
-      <div class="charter-phase">
-        <h3>Long term — Integrated digital platform</h3>
-        <p>
-          Work towards a more comprehensive platform that integrates
-          relevant operational processes, electronic records, document
-          management and tracking capabilities.
-        </p>
-      </div>
+        <article class="phase-card">
+          <h3>Medium-Term</h3>
 
-      <p style="margin-top: 14px;">
-        These phases reflect the current proposed direction and may be
-        refined following requirements analysis and feasibility review.
-      </p>
+          <p>
+            Explore a prototype that allows the team and intended users
+            to assess the proposed workflow, ease of use and suitability
+            before further development is considered.
+          </p>
+        </article>
+
+        <article class="phase-card">
+          <h3>Long-Term</h3>
+
+          <p>
+            Investigate the feasibility of an integrated digital platform
+            that could support suitable operational processes and
+            documentation in one coordinated environment.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section class="charter-section">
-      <h2>06. Communication and Collaboration</h2>
-      <p>
-        The team communicates through stand-up meetings, face-to-face
-        discussions and email follow-ups. These channels support the
-        sharing of updates, discussion of challenges and coordination
-        of project activities.
-      </p>
-      <p>
-        Team members are encouraged to contribute ideas, raise concerns
-        and explain their perspectives. Decisions should be informed
-        by constructive discussion and agreement, taking operational
-        needs and technical considerations into account.
-      </p>
-      <p>
-        Where appropriate, important work should be reviewed together
-        before submission or presentation to identify errors, address
-        concerns and maintain consistency.
-      </p>
-    </section>
+      <h2>6. Communication and Collaboration</h2>
 
-    <section class="charter-section">
-      <h2>07. Agile Working Agreements</h2>
-      <p>The team aims to:</p>
+      <p>
+        The team uses a combination of communication methods to discuss
+        project activities, share information and follow up on matters
+        requiring attention.
+      </p>
+
       <ul>
-        <li>Encourage participation and respect each team member's contribution.</li>
-        <li>Discuss challenges openly and consider different perspectives.</li>
-        <li>Base proposed solutions on identified requirements rather than assumptions.</li>
-        <li>Prioritise improvements that address genuine operational problems.</li>
-        <li>Review work before submission and consider relevant feedback.</li>
-        <li>Keep project information organised and communicate important updates.</li>
-        <li>Revisit requirements and proposed solutions when new information becomes available.</li>
+        <li>
+          <strong>Stand-up meetings:</strong>
+          Share updates, discuss progress and identify issues.
+        </li>
+        <li>
+          <strong>Face-to-face meetings:</strong>
+          Discuss project requirements, ideas and possible solutions.
+        </li>
+        <li>
+          <strong>Email follow-ups:</strong>
+          Communicate relevant information and follow up on discussions
+          when needed.
+        </li>
+      </ul>
+
+      <p>
+        Team members should communicate respectfully, listen to different
+        perspectives and share relevant information so that the team can
+        maintain a common understanding of the work.
+      </p>
+    </section>
+
+    <section class="charter-section">
+      <h2>7. Agile Working Agreements</h2>
+
+      <p>The team aims to follow these working agreements:</p>
+
+      <ul>
+        <li>
+          Keep discussions focused on the project objectives and
+          the needs of the intended users.
+        </li>
+        <li>
+          Encourage all team members to contribute ideas, ask questions
+          and raise concerns.
+        </li>
+        <li>
+          Work collaboratively and respect the experience and input
+          of other team members.
+        </li>
+        <li>
+          Share progress and communicate challenges as early as possible.
+        </li>
+        <li>
+          Review ideas and proposed solutions before treating them
+          as agreed project decisions.
+        </li>
+        <li>
+          Consider user feedback and use it to guide improvements
+          where appropriate.
+        </li>
+        <li>
+          Handle organisational information responsibly and follow
+          applicable JICS procedures and access requirements.
+        </li>
       </ul>
     </section>
 
     <section class="charter-section">
-      <h2>08. User-Centred Design and Feedback</h2>
+      <h2>8. User-Centred Design and Feedback</h2>
+
       <p>
-        The needs of ICCVs and other intended users should guide the
-        project's decisions. The proposed solution must consider their
-        working conditions, access to tablets and ability to use the
-        system comfortably.
+        The proposed digital solution should be informed by the needs
+        and experiences of the people who will use it. A solution may
+        be technically suitable but still be ineffective if it is
+        difficult to access or does not fit existing work processes.
       </p>
-      <p>
-        Feedback should be gathered and considered during requirements
-        analysis, prototype development and evaluation. The aim is to
-        develop a solution that is not only technically feasible but
-        also practical, accessible and useful in everyday work.
-      </p>
+
+      <p>The team should therefore aim to:</p>
+
+      <ul>
+        <li>
+          Understand the current workflow and the challenges users face.
+        </li>
+        <li>
+          Consider whether users have access to the required devices,
+          applications and connectivity.
+        </li>
+        <li>
+          Explore whether forms and documents can be completed and
+          submitted digitally where authorised.
+        </li>
+        <li>
+          Gather feedback on the usability and practicality of any
+          proposed prototype.
+        </li>
+        <li>
+          Consider accessibility, appropriate permissions and
+          the protection of organisational information.
+        </li>
+      </ul>
     </section>
 
     <section class="charter-section">
-      <h2>09. Decision-Making and Problem Resolution</h2>
+      <h2>9. Decision-Making and Problem Resolution</h2>
+
       <p>
-        Project decisions should consider user requirements, operational
-        priorities, technical feasibility and the intended project
-        objectives.
+        The team discusses project matters and considers the views
+        of its members when exploring possible solutions. The aim
+        is to reach a shared understanding and agreement wherever possible.
       </p>
+
       <p>
-        Team members should have an opportunity to express their opinions
-        and raise concerns. If agreement cannot be reached, the issue
-        should be discussed further and referred to the appropriate
-        project lead or decision-maker when necessary.
+        When a disagreement or challenge arises, the team should
+        clarify the problem, consider relevant evidence and discuss
+        possible options. Issues involving project scope, approvals,
+        technical access or organisational procedures should be referred
+        to the appropriate responsible person.
       </p>
+
       <p>
-        Significant changes to the proposed scope or direction should
-        be communicated to relevant team members.
+        Proposed changes should be discussed with the relevant project
+        stakeholders before they are treated as confirmed requirements.
       </p>
     </section>
 
     <section class="charter-section">
       <h2>10. Definition of Done</h2>
-      <p>A task may be considered complete when:</p>
-      <ul>
-        <li>Its purpose and requirements are understood.</li>
-        <li>The agreed work has been completed and reviewed.</li>
-        <li>Relevant information, documentation or outputs have been recorded and organised.</li>
-        <li>Identified errors and outstanding concerns have been addressed or documented.</li>
-        <li>Relevant feedback has been considered.</li>
-        <li>The appropriate person has reviewed or approved the work where required.</li>
-      </ul>
+
       <p>
-        For prototype-related tasks, usability and alignment with the
-        identified requirements should also be considered before the
-        work is accepted.
+        A project task or deliverable may be considered complete when
+        the following relevant conditions have been met:
       </p>
+
+      <ul>
+        <li>
+          The task has been completed according to its agreed purpose
+          and requirements.
+        </li>
+        <li>
+          The outcome has been reviewed by the relevant team members.
+        </li>
+        <li>
+          Any identified issues or limitations have been communicated.
+        </li>
+        <li>
+          Required feedback has been considered where applicable.
+        </li>
+        <li>
+          Relevant documentation or evidence has been updated and
+          stored appropriately.
+        </li>
+        <li>
+          Any necessary review or approval has been obtained before
+          the outcome is presented as final.
+        </li>
+      </ul>
     </section>
 
     <section class="charter-section">
       <h2>11. Expected Outcome</h2>
+
       <p>
-        The expected outcome is a practical foundation for improving
-        JICS operational processes through digital solutions. By
-        reducing unnecessary paperwork, improving information
-        management and considering user feedback, the project aims
-        to support more efficient administrative work and better
-        access to operational information.
+        The expected outcome is a clearer understanding of how digital
+        tools could improve selected JICS operational processes.
+        The project should help identify practical opportunities to
+        reduce unnecessary paperwork, improve document handling and
+        support more efficient access to relevant information.
       </p>
+
       <p>
-        The proposed solution should develop in stages, guided by
-        organisational needs, technical feasibility and feedback
-        from its intended users.
+        The project findings and any prototype developed should provide
+        a basis for evaluating the proposed approach and determining
+        possible next steps with the relevant stakeholders.
       </p>
     </section>
 
     <section class="charter-section">
       <h2>12. Items Requiring Confirmation</h2>
+
+      <p>
+        The following details should be confirmed as the project develops:
+      </p>
+
       <ul>
-        <li>The official project name.</li>
-        <li>Mr Sani's formal title and project responsibilities.</li>
-        <li>The agreed roles and responsibilities of individual team members.</li>
-        <li>The confirmed project scope and approved features.</li>
-        <li>Any formal Agile practices, approval procedures or document template required by JICS or the assessment.</li>
+        <li>
+          The final approved project name, scope and requirements.
+        </li>
+        <li>
+          Specific individual responsibilities beyond each team member's
+          current role.
+        </li>
+        <li>
+          The agreed features and boundaries of each proposed project phase.
+        </li>
+        <li>
+          Technical access, security requirements and any necessary
+          organisational approvals.
+        </li>
+        <li>
+          The method for obtaining and documenting feedback from
+          intended users.
+        </li>
+        <li>
+          The agreed criteria and approval process for accepting
+          completed deliverables.
+        </li>
       </ul>
+
+      <p>
+        This charter should be reviewed and updated when the team
+        confirms further project details or agrees to changes in scope.
+      </p>
     </section>
 
     <footer class="charter-footer">
-      JICS Industry Placement Portfolio · Nandipha Galada
+      <p>
+        Professional Practice 3 · Industry Placement Portfolio
+      </p>
+
+      <p>
+        Judicial Inspectorate for Correctional Services
+      </p>
+
+      <a class="back-link" href="index.html">
+        &larr; Return to portfolio homepage
+      </a>
     </footer>
 
   </main>
