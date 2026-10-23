@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product backlog for the ICCV digital platform management project at JICS.">
+  <title>Product Backlog | Nandipha Galada</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .backlog-page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 36px 28px 48px;
+      color: #292B28;
+    }
+
+    .backlog-hero {
+      padding: 34px;
+      margin-bottom: 26px;
+      border-radius: 18px;
+      color: #FFFFFF;
+      background: linear-gradient(135deg, #203B62, #172B47);
+      box-shadow: 0 8px 24px rgba(23, 43, 71, 0.12);
+    }
+
+    .backlog-hero .eyebrow {
+      margin: 0 0 10px;
+      color: #DCE6D9;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .backlog-hero h1 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.2;
+    }
+
+    .backlog-hero p {
+      max-width: 760px;
+      margin: 0;
+      color: #F1F3F6;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .backlog-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .meta-card {
+      padding: 18px;
+      border: 1px solid #E5E2DA;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.88);
+      box-shadow: 0 4px 14px rgba(32, 59, 98, 0.04);
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .meta-card:hover {
+      transform: translateY(-3px);
+      border-color: #A9BDA4;
+    }
+
+    .meta-card span {
+      display: block;
+      margin-bottom: 7px;
+      color: #73766F;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+
+    .meta-card strong {
+      display: block;
+      color: #203B62;
+      font-size: 14px;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .backlog-section {
+      margin-top: 30px;
+    }
+
+    .backlog-section h2 {
+      margin: 0 0 8px;
+      color: #203B62;
+      font-size: 23px;
+      line-height: 1.4;
+    }
+
+    .backlog-section .section-intro {
+      margin: 0 0 17px;
+      color: #62665F;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .backlog-panel {
+      overflow: hidden;
+      border: 1px solid #E5E2DA;
+      border-radius: 15px;
+      background: #FFFFFF;
+      box-shadow: 0 5px 18px rgba(32, 59, 98, 0.04);
+    }
+
+    .table-scroll {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .backlog-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .backlog-table th {
+      padding: 15px 14px;
+      background: #203B62;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.5;
+      vertical-align: top;
+    }
+
+    .backlog-table td {
+      padding: 15px 14px;
+      border-bottom: 1px solid #EAE8E1;
+      color: #42463F;
+      font-size: 13px;
+      line-height: 1.7;
+      vertical-align: top;
+    }
+
+    .backlog-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .backlog-table tbody tr:nth-child(even) {
+      background: #FAF9F6;
+    }
+
+    .backlog-table tbody tr:hover {
+      background: #F0F4EE;
+    }
+
+    .backlog-table td:first-child {
+      color: #203B62;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .priority {
+      color: #203B62;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .backlog-note {
+      margin-top: 16px;
+      padding: 16px 18px;
+      border-left: 4px solid #963F4C;
+      border-radius: 0 10px 10px 0;
+      background: #F8F6F1;
+      color: #51554E;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .backlog-note strong {
+      color: #203B62;
+    }
+
+    .refinement-list {
+      margin: 0;
+      padding-left: 21px;
+      color: #42463F;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .refinement-list li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .reflection-panel {
+      margin-top: 30px;
+      padding: 25px;
+      border: 1px solid #E0E7DC;
+      border-top: 4px solid #52684F;
+      border-radius: 14px;
+      background: #F0F4EE;
+    }
+
+    .reflection-label {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #52684F;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .reflection-panel h2 {
+      margin: 0 0 12px;
+      color: #203B62;
+      font-size: 23px;
+    }
+
+    .reflection-panel p {
+      margin: 0 0 12px;
+      color: #42463F;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .reflection-panel p:last-child {
+      margin-bottom: 0;
+    }
+
+    .backlog-footer {
+      margin-top: 36px;
+      padding-top: 22px;
+      border-top: 1px solid #E5E2DA;
+      text-align: center;
+    }
+
+    .backlog-footer p {
+      margin: 0 0 12px;
+      color: #73766F;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: #203B62;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: #963F4C;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 760px) {
+      .backlog-page {
+        padding: 24px 16px 36px;
+      }
+
+      .backlog-hero {
+        padding: 25px 21px;
+      }
+
+      .backlog-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .backlog-table {
+        min-width: 900px;
+      }
+
+      .backlog-section h2,
+      .reflection-panel h2 {
+        font-size: 21px;
+      }
+
+      .reflection-panel {
+        padding: 20px;
+      }
+    }
+
+    @media print {
+      .back-link {
+        display: none;
+      }
+
+      .backlog-page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .backlog-panel,
+      .meta-card,
+      .reflection-panel {
+        box-shadow: none;
+      }
+
+      .table-scroll {
+        overflow: visible;
+      }
+
+      .backlog-table {
+        min-width: 0;
+        font-size: 10px;
+      }
+
+      .backlog-table th,
+      .backlog-table td {
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="backlog-page">
+
+    <header class="backlog-hero">
+      <p class="eyebrow">Professional Practice 3 · Industry Placement</p>
+      <h1>Product Backlog</h1>
+      <p>
+        The product backlog outlines proposed features and activities for
+        the ICCV digital platform management project at JICS. It provides
+        a structured view of potential improvements and helps the team
+        consider which areas may deliver the greatest value to users.
+      </p>
+    </header>
+
+    <section class="backlog-meta" aria-label="Project information">
+      <article class="meta-card">
+        <span>Project</span>
+        <strong>ICCV Digital Platform Management</strong>
+      </article>
+
+      <article class="meta-card">
+        <span>Organisation</span>
+        <strong>Judicial Inspectorate for Correctional Services (JICS)</strong>
+      </article>
+    </section>
+
+    <section class="backlog-section">
+      <h2>Understanding the Product Backlog</h2>
+      <p class="section-intro">
+        In Agile, a product backlog is an evolving list of features,
+        improvements and other work that may be needed for a product.
+        Items can be reviewed, prioritised and refined as the team learns
+        more about user needs, technical requirements and project constraints.
+      </p>
+      <p class="section-intro">
+        For this project, the backlog focuses on exploring how suitable
+        operational processes could move from paper-based handling towards
+        more accessible and organised digital methods, while retaining
+        physical documentation wherever it remains necessary.
+      </p>
+    </section>
+
+    <section class="backlog-section">
+      <h2>Proposed Product Backlog</h2>
+      <p class="section-intro">
+        The following items are an initial proposal based on the project's
+        current direction. Priorities are provisional and should be reviewed
+        with the project team and relevant users before being treated as agreed.
+      </p>
+
+      <div class="backlog-panel">
+        <div class="table-scroll">
+          <table class="backlog-table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Proposed Feature or Activity</th>
+                <th scope="col">User Value</th>
+                <th scope="col">Proposed Priority</th>
+                <th scope="col">Current Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>PB-01</td>
+                <td>Understand ICCV workflows through survey feedback</td>
+                <td>Helps identify user needs, existing processes and areas that may benefit from improvement.</td>
+                <td class="priority">High</td>
+                <td>Survey prepared; distribution pending.</td>
+              </tr>
+
+              <tr>
+                <td>PB-02</td>
+                <td>Investigate access to digital documents and shared information</td>
+                <td>Helps establish how ICCVs could access relevant work information reliably.</td>
+                <td class="priority">High</td>
+                <td>Access requirements still need to be investigated.</td>
+              </tr>
+
+              <tr>
+                <td>PB-03</td>
+                <td>Explore a suitable short-term SharePoint solution</td>
+                <td>May provide a practical way to share selected work documents and information.</td>
+                <td class="priority">High</td>
+                <td>Proposed approach; suitability and access constraints need review.</td>
+              </tr>
+
+              <tr>
+                <td>PB-04</td>
+                <td>Investigate electronic forms and document handling</td>
+                <td>Could reduce repeated manual entry and make relevant documents easier to manage.</td>
+                <td class="priority">High</td>
+                <td>Requirements and authorisation needs to be established.</td>
+              </tr>
+
+              <tr>
+                <td>PB-05</td>
+                <td>Explore a prototype for user interaction</td>
+                <td>Would allow potential users to assess the usability of a proposed digital workflow.</td>
+                <td class="priority">Medium</td>
+                <td>Proposed medium-term phase; not yet presented as completed.</td>
+              </tr>
+
+              <tr>
+                <td>PB-06</td>
+                <td>Investigate complaint and inspection information tracking</td>
+                <td>Could support clearer record retrieval and visibility of work progress.</td>
+                <td class="priority">Medium</td>
+                <td>Needs further workflow analysis and user feedback.</td>
+              </tr>
+
+              <tr>
+                <td>PB-07</td>
+                <td>Consider reporting and management information needs</td>
+                <td>Could help relevant staff review activity and identify recurring operational issues.</td>
+                <td class="priority">Medium</td>
+                <td>Reporting requirements still need to be identified.</td>
+              </tr>
+
+              <tr>
+                <td>PB-08</td>
+                <td>Investigate a longer-term integrated digital platform</td>
+                <td>Could bring suitable processes and information into a more coordinated digital environment.</td>
+                <td class="priority">Medium</td>
+                <td>Proposed long-term direction requiring further planning and approval.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="backlog-note">
+        <strong>Important:</strong> This is a planning backlog, not
+        a record of approved or completed system features. The proposed
+        priorities may change after survey responses, workflow analysis,
+        technical review and discussions with the project team.
+      </div>
+    </section>
+
+    <section class="backlog-section">
+      <h2>Backlog Refinement and Next Steps</h2>
+      <p class="section-intro">
+        Backlog refinement helps keep proposed work relevant, understandable
+        and realistic as new information becomes available.
+      </p>
+
+      <div class="backlog-panel">
+        <div class="table-scroll">
+          <table class="backlog-table">
+            <thead>
+              <tr>
+                <th scope="col">Next Step</th>
+                <th scope="col">Purpose</th>
+                <th scope="col">What Needs to Happen</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Gather user feedback</td>
+                <td>Understand current activities, difficulties and user expectations.</td>
+                <td>Arrange survey distribution and review responses once received.</td>
+              </tr>
+
+              <tr>
+                <td>Review access requirements</td>
+                <td>Establish whether proposed digital options are practical for intended users.</td>
+                <td>Investigate organisational email, document access and available tools.</td>
+              </tr>
+
+              <tr>
+                <td>Refine backlog items</td>
+                <td>Make proposed features clearer and easier to assess.</td>
+                <td>Update priorities, requirements and acceptance criteria as evidence becomes available.</td>
+              </tr>
+
+              <tr>
+                <td>Plan future development</td>
+                <td>Identify realistic next steps for the proposed solution.</td>
+                <td>Discuss the SharePoint approach, potential prototype and longer-term direction with the project team.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="reflection-panel">
+      <span class="reflection-label">Learning &amp; Development</span>
+      <h2>Reflection</h2>
+
+      <p>
+        Developing this product backlog has helped me understand
+        how Agile planning connects a project's overall vision to smaller
+        pieces of work. Rather than treating every possible feature as
+        equally urgent, the backlog provides a way to organise ideas and
+        consider their potential value to users.
+      </p>
+
+      <p>
+        At this stage, the proposed items still need to be tested against
+        actual user needs and the organisation's requirements. The ICCV
+        survey has been prepared, but it has not yet been distributed.
+        This means that the current backlog is a starting point rather
+        than a final list of confirmed requirements.
+      </p>
+
+      <p>
+        My next learning step is to use the feedback and information
+        gathered during the project to help refine the backlog. This will
+        support more informed prioritisation and help distinguish between
+        ideas that are useful, technically practical and ready for further
+        consideration.
+      </p>
+    </section>
+
+    <footer class="backlog-footer">
+      <p>Professional Practice 3 · Industry Placement Portfolio</p>
+      <a class="back-link" href="index.html">
+        &larr; Return to portfolio homepage
+      </a>
+    </footer>
+
+  </main>
+</body>
+</html>
