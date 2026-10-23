@@ -12,15 +12,17 @@
       max-width: 1150px;
       margin: 0 auto;
       padding: 36px 28px 50px;
+      color: #292B28;
+      font-family: inherit;
     }
 
     .stories-heading {
       padding: 32px;
-      margin-bottom: 26px;
-      border-radius: 22px;
+      margin-bottom: 25px;
+      border-radius: 20px;
       color: #fff;
       background: linear-gradient(135deg, #203B62, #172B47);
-      box-shadow: 0 12px 30px rgba(23, 43, 71, 0.12);
+      box-shadow: 0 10px 26px rgba(23, 43, 71, 0.10);
     }
 
     .stories-heading .eyebrow {
@@ -28,42 +30,43 @@
       color: #DCE6D9;
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 1.6px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
     }
 
     .stories-heading h1 {
       margin: 0 0 12px;
-      font-size: clamp(28px, 4vw, 40px);
-      line-height: 1.2;
+      color: #fff;
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.25;
     }
 
     .stories-heading p {
       max-width: 780px;
       margin: 0;
       color: #F1F3F6;
-      font-size: 15px;
-      line-height: 1.8;
+      font-size: 14px;
+      line-height: 1.85;
     }
 
     .stories-meta {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
-      margin-bottom: 26px;
+      margin-bottom: 32px;
     }
 
     .meta-card {
-      padding: 18px;
+      padding: 17px 19px;
       border: 1px solid #E2E5E9;
-      border-radius: 15px;
+      border-radius: 13px;
       background: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 5px 16px rgba(32, 59, 98, 0.04);
+      box-shadow: 0 4px 14px rgba(32, 59, 98, 0.035);
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .meta-card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-2px);
       border-color: #9EAE99;
     }
 
@@ -73,161 +76,220 @@
       color: #73766F;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.9px;
       text-transform: uppercase;
     }
 
     .meta-card strong {
       color: #203B62;
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 13px;
+      line-height: 1.65;
     }
 
     .stories-section {
-      margin-bottom: 26px;
-      padding: 26px;
-      border: 1px solid #E5E2DA;
-      border-radius: 19px;
-      background: #fff;
-      box-shadow: 0 8px 24px rgba(32, 59, 98, 0.04);
+      margin-bottom: 32px;
     }
 
     .section-heading {
-      margin-bottom: 20px;
+      margin-bottom: 17px;
     }
 
-    .section-heading h2,
-    .reflection-card h2 {
-      margin: 0 0 9px;
+    .section-heading h2 {
+      margin: 0 0 8px;
       color: #203B62;
       font-size: 23px;
+      line-height: 1.4;
     }
 
     .section-heading p {
+      max-width: 850px;
       margin: 0;
-      color: #73766F;
-      font-size: 14px;
-      line-height: 1.8;
+      color: #666A63;
+      font-size: 13px;
+      line-height: 1.85;
     }
 
-    .story-list {
-      display: grid;
-      gap: 16px;
-    }
-
-    .story-card {
-      padding: 21px;
-      border: 1px solid #E5E2DA;
-      border-left: 4px solid #963F4C;
-      border-radius: 13px;
-      background: #FFFDF9;
-    }
-
-    .story-card h3 {
-      margin: 0 0 12px;
-      color: #203B62;
-      font-size: 17px;
-      line-height: 1.5;
-    }
-
-    .story-id {
-      display: inline-block;
-      margin-right: 7px;
-      color: #963F4C;
+    .table-caption {
+      margin: 0 0 11px;
+      color: #52684F;
       font-size: 12px;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: 0.5px;
     }
 
-    .story-text {
-      margin: 0 0 16px;
-      color: #292B28;
-      font-size: 14px;
-      line-height: 1.8;
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid #E3E2DC;
+      border-radius: 13px;
+      background: #fff;
+      box-shadow: 0 5px 17px rgba(32, 59, 98, 0.035);
     }
 
-    .story-text strong {
+    .stories-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      line-height: 1.75;
+      text-align: left;
+    }
+
+    .stories-table th {
+      padding: 14px 13px;
       color: #203B62;
+      background: #EEF1F4;
+      border-bottom: 1px solid #DDE2E7;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25px;
+      vertical-align: top;
     }
 
-    .story-details {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-      gap: 20px;
-      padding-top: 15px;
-      border-top: 1px solid #E9E6DF;
+    .stories-table td {
+      padding: 15px 13px;
+      color: #383B36;
+      border-bottom: 1px solid #EAE8E2;
+      vertical-align: top;
     }
 
-    .story-details h4 {
-      margin: 0 0 10px;
+    .stories-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .stories-table tbody tr:nth-child(even) {
+      background: #FCFBF8;
+    }
+
+    .stories-table tbody tr:hover {
+      background: #F3F6F0;
+    }
+
+    .stories-table .icon-cell {
+      width: 38px;
+      text-align: center;
       color: #52684F;
-      font-size: 13px;
+      font-size: 15px;
+      font-weight: 600;
     }
 
-    .story-details ul {
-      margin: 0;
-      padding-left: 18px;
-      color: #444740;
-      font-size: 13px;
-      line-height: 1.8;
+    .stories-table .id-cell {
+      min-width: 62px;
+      color: #963F4C;
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
     }
 
-    .acceptance {
+    .stories-table strong {
+      color: #203B62;
+      font-weight: 700;
+    }
+
+    .stories-table ul {
       margin: 0;
-      color: #444740;
-      font-size: 13px;
-      line-height: 1.8;
+      padding-left: 16px;
+    }
+
+    .stories-table li {
+      margin-bottom: 5px;
+    }
+
+    .stories-table li:last-child {
+      margin-bottom: 0;
+    }
+
+    .stories-table .story-column {
+      min-width: 225px;
+    }
+
+    .stories-table .tasks-column {
+      min-width: 235px;
+    }
+
+    .stories-table .criteria-column {
+      min-width: 220px;
+    }
+
+    .progress-table .task-column {
+      min-width: 175px;
+    }
+
+    .progress-table .progress-column {
+      min-width: 240px;
+    }
+
+    .progress-table .purpose-column {
+      min-width: 230px;
     }
 
     .project-note {
-      padding: 21px;
-      border: 1px solid #E5E2DA;
-      border-radius: 15px;
+      margin-top: 15px;
+      padding: 16px 19px;
+      border-left: 3px solid #963F4C;
+      border-radius: 0 10px 10px 0;
       background: #F8F6F1;
-    }
-
-    .project-note h3 {
-      margin: 0 0 9px;
-      color: #203B62;
-      font-size: 17px;
     }
 
     .project-note p {
       margin: 0;
       color: #444740;
-      font-size: 14px;
-      line-height: 1.8;
+      font-size: 12px;
+      line-height: 1.85;
     }
 
-    .reflection-card {
-      padding: 26px;
-      border: 1px solid #DCE6D9;
-      border-radius: 18px;
-      background: #F5F7F2;
+    .project-note strong {
+      color: #203B62;
     }
 
-    .reflection-card p {
+    .reflection-section {
+      margin-top: 38px;
+      padding: 26px 28px;
+      border-top: 3px solid #52684F;
+      border-bottom: 1px solid #DCE2D8;
+      background: linear-gradient(120deg, #F4F6F0, #FAF9F5);
+    }
+
+    .reflection-label {
+      margin: 0 0 9px;
+      color: #52684F;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .reflection-section h2 {
+      margin: 0 0 13px;
+      color: #203B62;
+      font-size: 24px;
+    }
+
+    .reflection-section p {
+      max-width: 900px;
       margin: 0;
-      color: #444740;
+      color: #383B36;
       font-size: 14px;
-      line-height: 1.9;
+      line-height: 1.95;
     }
 
-    .reflection-card p + p {
+    .reflection-section p + p {
       margin-top: 12px;
     }
 
     .stories-footer {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 30px;
       padding-top: 20px;
       border-top: 1px solid #E5E2DA;
       color: #73766F;
       font-size: 12px;
+    }
+
+    .stories-footer p {
+      margin: 0;
     }
 
     .back-link {
@@ -238,6 +300,7 @@
 
     .back-link:hover {
       color: #963F4C;
+      text-decoration: underline;
     }
 
     @media (max-width: 760px) {
@@ -251,20 +314,29 @@
 
       .stories-meta {
         grid-template-columns: 1fr;
+        gap: 10px;
       }
 
-      .story-details {
-        grid-template-columns: 1fr;
-        gap: 16px;
+      .section-heading h2 {
+        font-size: 21px;
       }
 
-      .stories-section,
-      .reflection-card {
-        padding: 20px;
+      .stories-table {
+        min-width: 760px;
       }
 
-      .story-card {
-        padding: 17px;
+      .progress-table {
+        min-width: 680px;
+      }
+
+      .reflection-section {
+        padding: 22px 19px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .meta-card {
+        transition: none;
       }
     }
 
@@ -274,23 +346,33 @@
         padding: 0;
       }
 
-      .stories-heading,
-      .stories-section,
-      .story-card,
-      .reflection-card,
-      .meta-card {
+      .stories-heading {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .table-wrap {
+        overflow: visible;
         box-shadow: none;
+      }
+
+      .stories-table {
+        min-width: 0;
+        font-size: 9px;
+      }
+
+      .stories-table th,
+      .stories-table td {
+        padding: 7px;
+      }
+
+      .stories-section,
+      .reflection-section {
         break-inside: avoid;
       }
 
       .stories-footer .back-link {
         display: none;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .meta-card {
-        transition: none;
       }
     }
   </style>
@@ -305,9 +387,9 @@
       <p>
         This section presents initial user stories and related tasks for the
         proposed JICS ICCV digital platform project. The stories explore
-        potential improvements to paperwork, document handling, information
-        submission and tablet usability. They will be refined as the project
-        gathers further information about users' needs and current processes.
+        possible improvements to document handling, information submission,
+        work processes and tablet usability. They will be refined as further
+        information becomes available.
       </p>
     </header>
 
@@ -332,273 +414,325 @@
       <div class="section-heading">
         <h2>1. User Stories</h2>
         <p>
-          These stories are preliminary and are based on the project's
-          objectives and the topics covered in the planned ICCV survey.
-          They represent needs to investigate, not confirmed findings
-          or completed system features.
+          The initial stories are based on the project's objectives and the
+          topics covered in the planned ICCV survey. They describe potential
+          user needs rather than confirmed findings or completed features.
         </p>
       </div>
 
-      <div class="story-list">
+      <p class="table-caption">Initial user stories and their related tasks</p>
 
-        <article class="story-card">
-          <h3><span class="story-id">US-01</span> Recording work information</h3>
-          <p class="story-text">
-            <strong>As an ICCV,</strong> I want to record complaint and
-            inspection information efficiently, <strong>so that</strong>
-            unnecessary administrative work can be reduced and records
-            can be organised more effectively.
-          </p>
-          <div class="story-details">
-            <div>
-              <h4>Related tasks</h4>
-              <ul>
-                <li>Document the current complaint and inspection recording processes.</li>
-                <li>Investigate where repeated paperwork may occur.</li>
-                <li>Identify information that may be suitable for electronic capture.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Acceptance criteria</h4>
-              <p class="acceptance">
-                Current processes are documented, and potential opportunities
-                for electronic recording are identified for further review.
-              </p>
-            </div>
-          </div>
-        </article>
+      <div class="table-wrap">
+        <table class="stories-table">
+          <thead>
+            <tr>
+              <th aria-label="Icon"></th>
+              <th>Story ID</th>
+              <th>User Story</th>
+              <th>Related Tasks</th>
+              <th>Acceptance Criteria</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="id-cell">US-01</td>
+              <td class="story-column">
+                <strong>Recording information</strong><br>
+                As an ICCV, I want to record complaint and inspection
+                information efficiently so that unnecessary administrative
+                work can be reduced.
+              </td>
+              <td class="tasks-column">
+                <ul>
+                  <li>Document current recording processes.</li>
+                  <li>Investigate repeated paperwork.</li>
+                  <li>Identify opportunities for electronic capture.</li>
+                </ul>
+              </td>
+              <td class="criteria-column">
+                Current processes are documented and potential opportunities
+                for electronic recording are identified for review.
+              </td>
+            </tr>
 
-        <article class="story-card">
-          <h3><span class="story-id">US-02</span> Completing documents electronically</h3>
-          <p class="story-text">
-            <strong>As an ICCV,</strong> I want to complete suitable
-            work-related documents electronically, <strong>so that</strong>
-            paper-based steps can be reduced where an approved digital
-            alternative is appropriate.
-          </p>
-          <div class="story-details">
-            <div>
-              <h4>Related tasks</h4>
-              <ul>
-                <li>Identify forms currently completed on paper.</li>
-                <li>Investigate tablet applications for editing documents and PDFs.</li>
-                <li>Determine applicable approval, signature and recordkeeping requirements.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Acceptance criteria</h4>
-              <p class="acceptance">
-                Suitable electronic document options and their relevant
-                approval and recordkeeping requirements are documented.
-              </p>
-            </div>
-          </div>
-        </article>
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="id-cell">US-02</td>
+              <td class="story-column">
+                <strong>Electronic documents</strong><br>
+                As an ICCV, I want to complete suitable documents electronically
+                so that paper-based steps can be reduced where appropriate.
+              </td>
+              <td class="tasks-column">
+                <ul>
+                  <li>Identify forms currently completed on paper.</li>
+                  <li>Investigate tablet apps for documents and PDFs.</li>
+                  <li>Check approval and recordkeeping requirements.</li>
+                </ul>
+              </td>
+              <td class="criteria-column">
+                Potential electronic document options and relevant approval
+                requirements are documented.
+              </td>
+            </tr>
 
-        <article class="story-card">
-          <h3><span class="story-id">US-03</span> Including supporting evidence</h3>
-          <p class="story-text">
-            <strong>As an ICCV,</strong> I want to associate relevant
-            photographs and supporting documents with work records,
-            <strong>so that</strong> supporting information can be considered
-            alongside the related record.
-          </p>
-          <div class="story-details">
-            <div>
-              <h4>Related tasks</h4>
-              <ul>
-                <li>Investigate the types of supporting evidence used during fieldwork.</li>
-                <li>Review the tablet's ability to capture or attach relevant files.</li>
-                <li>Identify appropriate security and storage requirements.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Acceptance criteria</h4>
-              <p class="acceptance">
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="id-cell">US-03</td>
+              <td class="story-column">
+                <strong>Supporting evidence</strong><br>
+                As an ICCV, I want to associate relevant photographs and
+                documents with work records so that supporting information
+                can be reviewed alongside the record.
+              </td>
+              <td class="tasks-column">
+                <ul>
+                  <li>Investigate evidence collected during fieldwork.</li>
+                  <li>Review tablet capture and attachment functions.</li>
+                  <li>Identify secure handling requirements.</li>
+                </ul>
+              </td>
+              <td class="criteria-column">
                 Evidence-handling needs and security requirements are
                 documented, and a suitable method is proposed for evaluation.
-              </p>
-            </div>
-          </div>
-        </article>
+              </td>
+            </tr>
 
-        <article class="story-card">
-          <h3><span class="story-id">US-04</span> Submitting work information</h3>
-          <p class="story-text">
-            <strong>As an ICCV,</strong> I want an accessible method of
-            submitting work-related information, <strong>so that</strong>
-            the relevant staff can receive it without unnecessary delays
-            or repeated manual steps.
-          </p>
-          <div class="story-details">
-            <div>
-              <h4>Related tasks</h4>
-              <ul>
-                <li>Map the current document submission process.</li>
-                <li>Investigate challenges involving scanning, email and document sharing.</li>
-                <li>Explore submission options and their access requirements.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Acceptance criteria</h4>
-              <p class="acceptance">
-                The existing submission process and its limitations are
-                documented, and possible alternatives are identified
-                for further assessment.
-              </p>
-            </div>
-          </div>
-        </article>
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="id-cell">US-04</td>
+              <td class="story-column">
+                <strong>Submitting information</strong><br>
+                As an ICCV, I want an accessible way to submit work-related
+                information so that relevant staff can receive it without
+                unnecessary delays.
+              </td>
+              <td class="tasks-column">
+                <ul>
+                  <li>Map the existing submission process.</li>
+                  <li>Investigate scanning, email and sharing challenges.</li>
+                  <li>Explore submission options and access needs.</li>
+                </ul>
+              </td>
+              <td class="criteria-column">
+                The existing process and its limitations are documented,
+                and possible alternatives are identified for assessment.
+              </td>
+            </tr>
 
-        <article class="story-card">
-          <h3><span class="story-id">US-05</span> Retrieving work-related documents</h3>
-          <p class="story-text">
-            <strong>As an authorised JICS staff member,</strong> I want to
-            retrieve work-related documents from an organised location,
-            <strong>so that</strong> I can locate the information needed
-            for my responsibilities more efficiently.
-          </p>
-          <div class="story-details">
-            <div>
-              <h4>Related tasks</h4>
-              <ul>
-                <li>Document current methods of storing work-related records.</li>
-                <li>Investigate possible difficulties finding existing documents.</li>
-                <li>Explore suitable storage, retrieval and access arrangements.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Acceptance criteria</h4>
-              <p class="acceptance">
-                Document retrieval needs are recorded, and a proposed approach
-                considers authorised access and recordkeeping requirements.
-              </p>
-            </div>
-          </div>
-        </article>
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="id-cell">US-05</td>
+              <td class="story-column">
+                <strong>Document retrieval</strong><br>
+                As an authorised JICS staff member, I want to retrieve
+                work-related documents from an organised location so that
+                I can find information more efficiently.
+              </td>
+              <td class="tasks-column">
+                <ul>
+                  <li>Document current record storage methods.</li>
+                  <li>Investigate difficulties finding documents.</li>
+                  <li>Explore storage and access arrangements.</li>
+                </ul>
+              </td>
+              <td class="criteria-column">
+                Retrieval needs are documented, with authorised access and
+                recordkeeping requirements considered.
+              </td>
+            </tr>
 
-        <article class="story-card">
-          <h3><span class="story-id">US-06</span> Using tablets for work</h3>
-          <p class="story-text">
-            <strong>As an ICCV,</strong> I want access to the tablet
-            applications and functions required for my work,
-            <strong>so that</strong> I can complete suitable tasks with
-            fewer technical difficulties.
-          </p>
-          <div class="story-details">
-            <div>
-              <h4>Related tasks</h4>
-              <ul>
-                <li>Investigate access to tablets for work purposes.</li>
-                <li>Identify available applications and functions.</li>
-                <li>Gather information about usability difficulties and missing functions.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Acceptance criteria</h4>
-              <p class="acceptance">
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="id-cell">US-06</td>
+              <td class="story-column">
+                <strong>Tablet usability</strong><br>
+                As an ICCV, I want access to the tablet applications and
+                functions needed for work so that I can complete suitable
+                tasks with fewer technical difficulties.
+              </td>
+              <td class="tasks-column">
+                <ul>
+                  <li>Investigate access to work tablets.</li>
+                  <li>Identify available applications and functions.</li>
+                  <li>Gather information about usability difficulties.</li>
+                </ul>
+              </td>
+              <td class="criteria-column">
                 Tablet access, available functions and potential usability
-                issues are documented for consideration by the project team.
-              </p>
-            </div>
-          </div>
-        </article>
+                issues are documented for the team to consider.
+              </td>
+            </tr>
 
-        <article class="story-card">
-          <h3><span class="story-id">US-07</span> Improving current workflows</h3>
-          <p class="story-text">
-            <strong>As an ICCV,</strong> I want a digital workflow that
-            addresses difficulties in current work processes,
-            <strong>so that</strong> I can carry out relevant tasks more
-            effectively.
-          </p>
-          <div class="story-details">
-            <div>
-              <h4>Related tasks</h4>
-              <ul>
-                <li>Investigate time-consuming and challenging activities.</li>
-                <li>Identify possible workflow improvements.</li>
-                <li>Compare proposed improvements with collected evidence and project objectives.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Acceptance criteria</h4>
-              <p class="acceptance">
-                Proposed improvements are linked to documented process
-                challenges and reviewed before any implementation decision.
-              </p>
-            </div>
-          </div>
-        </article>
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="id-cell">US-07</td>
+              <td class="story-column">
+                <strong>Workflow improvement</strong><br>
+                As an ICCV, I want a digital workflow that addresses
+                difficulties in current processes so that I can carry
+                out relevant tasks more effectively.
+              </td>
+              <td class="tasks-column">
+                <ul>
+                  <li>Investigate challenging and time-consuming activities.</li>
+                  <li>Identify possible workflow improvements.</li>
+                  <li>Compare options with evidence and project objectives.</li>
+                </ul>
+              </td>
+              <td class="criteria-column">
+                Proposed improvements are linked to documented challenges
+                and reviewed before implementation decisions.
+              </td>
+            </tr>
 
-        <article class="story-card">
-          <h3><span class="story-id">US-08</span> Understanding user requirements</h3>
-          <p class="story-text">
-            <strong>As a member of the project team,</strong> I want to
-            gather and review feedback from ICCVs, <strong>so that</strong>
-            the proposed solution can be shaped around actual working
-            conditions and user needs.
-          </p>
-          <div class="story-details">
-            <div>
-              <h4>Related tasks</h4>
-              <ul>
-                <li>Support the preparation and distribution of the ICCV survey.</li>
-                <li>Address practical access arrangements for intended participants.</li>
-                <li>Review responses and refine the initial user stories when evidence becomes available.</li>
-              </ul>
-            </div>
-            <div>
-              <h4>Acceptance criteria</h4>
-              <p class="acceptance">
-                Feedback is collected when distribution becomes possible,
-                findings are documented, and relevant changes to the
-                initial stories are recorded.
-              </p>
-            </div>
-          </div>
-        </article>
-
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="id-cell">US-08</td>
+              <td class="story-column">
+                <strong>Understanding user needs</strong><br>
+                As a project team member, I want to gather and review ICCV
+                feedback so that the proposed solution can reflect actual
+                working conditions and user needs.
+              </td>
+              <td class="tasks-column">
+                <ul>
+                  <li>Support preparation and distribution of the survey.</li>
+                  <li>Address practical participant access arrangements.</li>
+                  <li>Review responses and refine the stories when available.</li>
+                </ul>
+              </td>
+              <td class="criteria-column">
+                Once feedback is received, findings are documented and
+                relevant changes to the initial stories are recorded.
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
     <section class="stories-section">
       <div class="section-heading">
-        <h2>2. Project Tasks and Current Progress</h2>
+        <h2>2. Project Tasks &amp; Current Progress</h2>
         <p>
-          The tasks above focus on investigating existing processes,
-          identifying possible improvements and establishing requirements
-          before committing to specific features.
+          These activities support the investigation of user needs and the
+          gradual development of a suitable approach. Progress descriptions
+          reflect the current planning stage.
         </p>
       </div>
 
+      <div class="table-wrap">
+        <table class="stories-table progress-table">
+          <thead>
+            <tr>
+              <th aria-label="Icon"></th>
+              <th>Project Activity</th>
+              <th>Purpose</th>
+              <th>Current Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="task-column"><strong>Prepare the ICCV survey</strong></td>
+              <td class="purpose-column">
+                Gather information about current processes, challenges,
+                tablet use and possible improvements.
+              </td>
+              <td class="progress-column">
+                Survey questions have been prepared. Distribution is pending
+                while organisational email access arrangements are being addressed.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="task-column"><strong>Develop initial user stories</strong></td>
+              <td class="purpose-column">
+                Translate project objectives and potential user needs into
+                clear stories and manageable tasks.
+              </td>
+              <td class="progress-column">
+                Initial stories and related tasks have been drafted.
+                They will need review as further evidence becomes available.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="task-column"><strong>Explore a short-term approach</strong></td>
+              <td class="purpose-column">
+                Investigate whether SharePoint could support an initial
+                information-sharing solution.
+              </td>
+              <td class="progress-column">
+                Proposed project direction; access requirements and suitability
+                still need to be considered.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="task-column"><strong>Consider a prototype</strong></td>
+              <td class="purpose-column">
+                Explore a way to evaluate user interaction and the suitability
+                of proposed functions.
+              </td>
+              <td class="progress-column">
+                Identified as a proposed medium-term phase; prototype development
+                and testing have not been confirmed as completed.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="icon-cell" aria-hidden="true">◇</td>
+              <td class="task-column"><strong>Consider an integrated platform</strong></td>
+              <td class="purpose-column">
+                Explore longer-term opportunities for more integrated digital
+                work processes.
+              </td>
+              <td class="progress-column">
+                Proposed long-term direction requiring further investigation,
+                planning and organisational approval.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div class="project-note">
-        <h3>Survey distribution and access arrangements</h3>
         <p>
-          The ICCV survey has not yet been distributed. The team is working
-          through an access challenge involving organisational email accounts,
-          as email is the intended distribution route. Until suitable
-          arrangements are established and responses are received, the user
-          stories remain preliminary. Survey findings can later be used to
-          validate the proposed needs and refine the related tasks.
+          <strong>Project note:</strong> The survey has not yet been distributed,
+          so no survey findings are being presented as confirmed user feedback.
+          The initial stories and proposed activities will be reviewed as the
+          project progresses.
         </p>
       </div>
     </section>
 
-    <section class="reflection-card">
-      <h2>3. Reflection</h2>
+    <section class="reflection-section">
+      <p class="reflection-label">Learning &amp; Development</p>
+      <h2>Reflection</h2>
       <p>
-        Developing the initial user stories has helped me understand why
-        user requirements should be investigated before a digital solution
-        is designed. Breaking potential needs into smaller tasks provides
-        a clearer way to investigate current processes and consider possible
-        improvements. I have also recognised that gathering requirements
-        depends on being able to reach the intended users. The survey has
-        not yet been distributed because access arrangements for organisational
-        email are still being addressed. At this stage, I need to distinguish
-        between proposed requirements and confirmed user needs. Reviewing
-        the survey responses when they become available will help me refine
-        the stories using evidence rather than assumptions.
+        Developing these initial user stories has helped me understand that
+        planning a digital solution involves more than identifying features
+        that could be useful. It requires understanding the work people do,
+        the difficulties they may experience and the requirements that a
+        solution would need to meet. Breaking potential needs into smaller
+        tasks also makes the investigation more structured and manageable.
+      </p>
+      <p>
+        An important lesson at this stage is that requirements should not be
+        treated as confirmed before sufficient information has been gathered.
+        The survey is intended to help the project team understand the
+        experiences of ICCVs, but its distribution is still being arranged
+        because of organisational email access challenges. This has highlighted
+        the importance of considering communication and access when planning
+        user research. As the project develops, I will be able to review the
+        initial stories against the information collected and reflect on how
+        the findings influence the proposed solution.
       </p>
     </section>
 
