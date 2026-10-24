@@ -87,6 +87,8 @@ img {
   border-radius: 50%;
 }
 
+.brand-info { min-width: 0; } .brand-info strong, .brand-info small { display: block; } .brand-info strong { font-size: 14px; letter-spacing: -.02em; } .brand-info small { color: #E0E6EE; font-size: 12px; margin-top: 2px; }
+
 .nav-label,
 .eyebrow {
   font-size: 12px;
