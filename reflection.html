@@ -11,76 +11,56 @@
     .reflection-page {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 30px 24px 50px;
+      padding: 32px 22px 55px;
+      color: #292d35;
+      line-height: 1.7;
     }
 
-    /* Navy introduction card */
     .reflection-hero {
       background: #203B62;
       color: #FFFFFF;
       padding: 38px;
-      border-radius: 14px;
-      margin-bottom: 28px;
-    }
-
-    .reflection-hero .eyebrow,
-    .reflection-hero h1,
-    .reflection-hero p {
-      color: #FFFFFF;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 28px rgba(32, 59, 98, 0.15);
     }
 
     .reflection-hero .eyebrow {
+      color: #FFFFFF;
       font-size: 0.8rem;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin: 0 0 12px;
+      margin: 0 0 10px;
     }
 
     .reflection-hero h1 {
+      color: #FFFFFF;
       font-size: clamp(2rem, 4vw, 3rem);
       line-height: 1.2;
       margin: 0 0 16px;
     }
 
     .reflection-hero p {
+      color: #FFFFFF;
       max-width: 760px;
       font-size: 1rem;
       line-height: 1.8;
       margin: 0;
     }
 
-    /* One main reflection card */
     .reflection-card {
       background: #FFFFFF;
       border: 1px solid #E5E2DA;
-      border-radius: 14px;
-      padding: 34px;
-      margin-bottom: 28px;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 18px rgba(23, 43, 71, 0.04);
     }
 
-    .reflection-card h2 {
-      color: #203B62;
-      font-size: 1.4rem;
-      line-height: 1.4;
-      margin: 0 0 14px;
-    }
-
-    .reflection-card p {
-      color: #292B28;
-      font-size: 0.98rem;
-      line-height: 1.85;
-      margin: 0 0 14px;
-    }
-
-    .reflection-card p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Subsections inside the main card */
     .reflection-subsection {
-      padding: 0 0 25px;
-      margin: 0 0 25px;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
       border-bottom: 1px solid #E5E2DA;
     }
 
@@ -90,7 +70,26 @@
       border-bottom: none;
     }
 
-    /* Simple bullet lists */
+    .reflection-subsection h2 {
+      color: #203B62;
+      font-size: 1.35rem;
+      line-height: 1.4;
+      margin: 0 0 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #E5E2DA;
+    }
+
+    .reflection-subsection p {
+      color: #292B28;
+      font-size: 0.98rem;
+      line-height: 1.85;
+      margin: 0 0 14px;
+    }
+
+    .reflection-subsection p:last-child {
+      margin-bottom: 0;
+    }
+
     .reflection-list {
       padding-left: 24px;
       margin: 12px 0 16px;
@@ -111,59 +110,47 @@
       color: #203B62;
     }
 
-    /* Clickable deliverable links */
     .reflection-list a {
       color: #203B62;
       font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      text-decoration: none;
     }
 
     .reflection-list a:hover {
       color: #963F4C;
+      text-decoration: underline;
     }
 
-    /* Back to portfolio button */
-    .reflection-back {
+    /* Same simple text-link style as the other portfolio pages */
+    .back-link {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       gap: 8px;
-      padding: 12px 20px;
-      margin: 0 0 30px;
-      background-color: #203B62 !important;
-      color: #FFFFFF !important;
-      border: 1px solid #203B62;
-      border-radius: 8px;
+      color: #203B62;
       font-weight: 600;
-      text-decoration: none !important;
-      box-sizing: border-box;
-      transition: background-color 0.2s ease, transform 0.2s ease;
+      text-decoration: none;
+      margin-bottom: 25px;
     }
 
-    .reflection-back:hover,
-    .reflection-back:focus {
-      background-color: #172B47 !important;
-      color: #FFFFFF !important;
-      text-decoration: none !important;
-      transform: translateY(-2px);
+    .back-link:hover {
+      color: #963F4C;
+      text-decoration: underline;
     }
 
-    /* Mobile layout */
-    @media (max-width: 768px) {
+    @media (max-width: 760px) {
       .reflection-page {
-        padding: 20px 16px 35px;
+        padding: 22px 14px 40px;
       }
 
       .reflection-hero {
-        padding: 26px 22px;
+        padding: 27px 22px;
       }
 
       .reflection-card {
-        padding: 24px 20px;
+        padding: 22px 18px;
       }
 
-      .reflection-card h2 {
+      .reflection-subsection h2 {
         font-size: 1.2rem;
       }
     }
@@ -172,276 +159,271 @@
 
 <body>
 
-  <div class="app-shell">
+  <button class="menu-toggle" id="menuToggle"
+    aria-label="Toggle navigation" aria-expanded="false">☰</button>
 
-    <!-- Sidebar navigation -->
-    <aside class="sidebar">
-      <div class="sidebar-brand">
-        <span class="brand-mark">NG</span>
-
-        <div>
-          <strong>Nandipha Galada</strong>
-          <span>Industry Placement</span>
-        </div>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html" aria-label="Portfolio home">
+      <div class="brand-mark">
+        <img src="industry placement portfolio.jpg" alt="Nandipha Galada at JICS">
       </div>
 
-      <nav class="sidebar-nav" aria-label="Main navigation">
-        <a href="index.html">Portfolio Overview</a>
-        <a href="team-charter.html">Agile Team Charter</a>
-        <a href="user-stories.html">User Stories &amp; Tasks</a>
-        <a href="product-backlog.html">Product Backlog</a>
-        <a href="sprint-backlog.html">Sprint Backlog</a>
-        <a href="agile-logbook.html">Agile Logbook</a>
-        <a href="reflection.html" class="active" aria-current="page">
-          Overall Reflection
-        </a>
-      </nav>
-    </aside>
+      <div class="brand-info">
+        <strong>Nandipha Galada</strong>
+        <small>Professional Practice 3</small>
+      </div>
+    </a>
 
-    <div class="main-content">
+    <p class="nav-label">PORTFOLIO</p>
 
-      <!-- Top navigation bar -->
-      <header class="topbar">
-        <p>Professional Practice 3</p>
-      </header>
+    <nav>
+      <a class="nav-link" href="index.html">Overview</a>
+      <a class="nav-link" href="team-charter.html">Agile Team Charter</a>
+      <a class="nav-link" href="user-stories.html">User Stories &amp; Tasks</a>
+      <a class="nav-link" href="product-backlog.html">Product Backlog</a>
+      <a class="nav-link" href="sprint-backlog.html">Sprint Backlog</a>
+      <a class="nav-link" href="agile-logbook.html">Agile Logbook</a>
+      <a class="nav-link active" href="reflection.html" aria-current="page">
+        Overall Reflection
+      </a>
+    </nav>
 
-      <main class="reflection-page">
+    <div class="sidebar-note">
+      <span class="note-dot"></span>
+      <div>
+        <strong>Industry Placement</strong>
+        <small>JICS · Professional learning</small>
+      </div>
+    </div>
+  </aside>
 
-        <!-- Introduction -->
-        <section class="reflection-hero">
-          <p class="eyebrow">
-            Professional Practice 3 · Industry Placement
-          </p>
+  <main class="main-content" id="home">
 
-          <h1>Overall Reflection</h1>
+    <div class="reflection-page">
+
+      <section class="reflection-hero">
+        <p class="eyebrow">Professional Practice 3 · Industry Placement</p>
+
+        <h1>Overall Reflection</h1>
+
+        <p>
+          My industry placement at the Judicial Inspectorate for Correctional
+          Services (JICS) has helped me connect what I have learned through
+          my ICT studies with the realities of a professional working
+          environment. Through the ICCV job management platform project, I
+          have gained a better understanding of requirements analysis, Agile
+          planning, communication and the importance of considering users
+          when exploring digital solutions.
+        </p>
+      </section>
+
+      <article class="reflection-card">
+
+        <section class="reflection-subsection">
+          <h2>My Experience and Professional Growth</h2>
 
           <p>
-            My industry placement at the Judicial Inspectorate for Correctional
-            Services (JICS) has helped me connect what I have learned through
-            my ICT studies with the realities of a professional working
-            environment. Through the ICCV job management platform project, I
-            have gained a better understanding of requirements analysis, Agile
-            planning, communication and the importance of considering users
-            when exploring digital solutions.
+            My placement has given me an opportunity to explore how
+            information technology can support everyday work processes.
+            The ICCV job management platform project has helped me look
+            beyond the technical side of a system and consider the people
+            who would use it, the information they need and the challenges
+            they experience.
+          </p>
+
+          <p>
+            Working on this project has also shown me that understanding
+            a problem should come before proposing a solution. Before
+            deciding what a digital platform should include, it is
+            important to understand the current process, identify areas
+            that could be improved and consider the needs of the intended
+            users.
+          </p>
+
+          <p>
+            This experience has encouraged me to think more carefully
+            about how technology can improve efficiency, reduce unnecessary
+            repetition and support better information management.
           </p>
         </section>
 
-        <!-- All reflection sections in one card -->
-        <article class="reflection-card">
+        <section class="reflection-subsection">
+          <h2>Skills and Knowledge I Have Developed</h2>
 
-          <section class="reflection-subsection">
-            <h2>My Experience and Professional Growth</h2>
+          <p>
+            Throughout this project, I have developed a better understanding
+            of several skills and concepts that are important in IT project
+            work:
+          </p>
 
-            <p>
-              My placement has given me an opportunity to explore how
-              information technology can support everyday work processes.
-              The ICCV job management platform project has helped me look
-              beyond the technical side of a system and consider the people
-              who would use it, the information they need and the challenges
-              they experience.
-            </p>
+          <ul class="reflection-list">
+            <li>
+              <strong>Requirements analysis:</strong>
+              Understanding users, their responsibilities and their
+              challenges before deciding what a system should do.
+            </li>
 
-            <p>
-              Working on this project has shown me that understanding a
-              problem should come before proposing a solution. Before
-              deciding what a digital platform should include, it is
-              important to understand the current process, identify areas
-              that could be improved and consider the needs of the intended
-              users.
-            </p>
+            <li>
+              <strong>Agile planning:</strong>
+              Organising project work into user stories, prioritised tasks,
+              backlogs and manageable activities.
+            </li>
 
-            <p>
-              This experience has encouraged me to think more carefully
-              about how technology can improve efficiency, reduce unnecessary
-              repetition and support better information management.
-            </p>
-          </section>
+            <li>
+              <strong>Communication and collaboration:</strong>
+              Recognising the importance of clarifying expectations, asking
+              questions and coordinating with others.
+            </li>
 
-          <section class="reflection-subsection">
-            <h2>Skills and Knowledge I Have Developed</h2>
+            <li>
+              <strong>Problem-solving and critical thinking:</strong>
+              Examining existing processes and considering practical
+              limitations before proposing possible digital improvements.
+            </li>
+          </ul>
 
-            <p>
-              Throughout this project, I have developed a better understanding
-              of several skills and concepts that are important in IT project
-              work:
-            </p>
+          <p>
+            I have also gained a clearer understanding of how project
+            documentation helps organise ideas, communicate decisions and
+            keep project activities focused on the intended objectives.
+          </p>
+        </section>
 
-            <ul class="reflection-list">
-              <li>
-                <strong>Requirements analysis:</strong>
-                Understanding users, their responsibilities and their
-                challenges before deciding what a system should do.
-              </li>
+        <section class="reflection-subsection">
+          <h2>Challenges and How I Responded</h2>
 
-              <li>
-                <strong>Agile planning:</strong>
-                Organising project work into user stories, prioritised tasks,
-                backlogs and manageable activities.
-              </li>
+          <p>
+            One of the challenges during the placement has been working
+            through project activities while balancing my workplace
+            responsibilities and academic commitments. Progress can depend
+            on access to information, feedback and clarification from the
+            relevant people, which means that some activities cannot always
+            move forward as quickly as expected.
+          </p>
 
-              <li>
-                <strong>Communication and collaboration:</strong>
-                Recognising the importance of clarifying expectations, asking
-                questions and coordinating with others.
-              </li>
+          <p>
+            These challenges have taught me the importance of patience,
+            planning and keeping track of outstanding tasks. They have also
+            shown me why communication is essential when working on a
+            project, particularly when requirements need to be clarified
+            before the next steps can be completed.
+          </p>
 
-              <li>
-                <strong>Problem-solving and critical thinking:</strong>
-                Examining existing processes and considering practical
-                limitations before proposing possible digital improvements.
-              </li>
-            </ul>
+          <p>
+            Rather than assuming that every challenge can be solved
+            immediately, I have learned to identify what can be progressed
+            independently and what requires further information or feedback.
+            This has helped me approach the work more realistically.
+          </p>
+        </section>
 
-            <p>
-              I have also gained a clearer understanding of how project
-              documentation helps organise ideas, communicate decisions and
-              keep project activities focused on the intended objectives.
-            </p>
-          </section>
+        <section class="reflection-subsection">
+          <h2>Evidence of My Development</h2>
 
-          <section class="reflection-subsection">
-            <h2>Challenges and How I Responded</h2>
+          <p>
+            The following project deliverables provide evidence of my
+            learning and show how I have been applying Agile concepts and
+            project planning practices throughout the placement.
+          </p>
 
-            <p>
-              One of the challenges during the placement has been working
-              through project activities while balancing my workplace
-              responsibilities and academic commitments. Progress can depend
-              on access to information, feedback and clarification from the
-              relevant people, meaning some activities cannot always move
-              forward as quickly as expected.
-            </p>
+          <ul class="reflection-list">
+            <li>
+              <strong>
+                <a href="team-charter.html">Agile Team Charter</a>:
+              </strong>
+              Demonstrates my understanding of project purpose,
+              responsibilities and working agreements.
+            </li>
 
-            <p>
-              These challenges have taught me the importance of patience,
-              planning and keeping track of outstanding tasks. They have also
-              shown me why communication is essential when working on a
-              project, particularly when requirements need to be clarified
-              before the next steps can be completed.
-            </p>
+            <li>
+              <strong>
+                <a href="user-stories.html">User Stories &amp; Tasks</a>:
+              </strong>
+              Shows how user needs can be expressed as stories with
+              associated tasks and acceptance criteria.
+            </li>
 
-            <p>
-              I have learned to identify what can be progressed independently
-              and what requires further information or feedback. This has
-              helped me approach the work more realistically.
-            </p>
-          </section>
+            <li>
+              <strong>
+                <a href="product-backlog.html">Product Backlog</a>:
+              </strong>
+              Reflects my learning about organising and prioritising
+              proposed features and project work.
+            </li>
 
-          <section class="reflection-subsection">
-            <h2>Evidence of My Development</h2>
+            <li>
+              <strong>
+                <a href="sprint-backlog.html">Sprint Backlog</a>:
+              </strong>
+              Demonstrates how selected work can be grouped around a
+              sprint goal and tracked.
+            </li>
 
-            <p>
-              The following project deliverables provide evidence of my
-              learning and show how I have been applying Agile concepts and
-              project planning practices throughout the placement.
-            </p>
+            <li>
+              <strong>
+                <a href="agile-logbook.html">Agile Logbook</a>:
+              </strong>
+              Records project progress, decisions, challenges and learning
+              throughout the placement.
+            </li>
+          </ul>
+        </section>
 
-            <ul class="reflection-list">
-              <li>
-                <strong>
-                  <a href="team-charter.html">Agile Team Charter</a>:
-                </strong>
-                Demonstrates my understanding of project purpose,
-                responsibilities and working agreements.
-              </li>
+        <section class="reflection-subsection">
+          <h2>What I Would Approach Differently Next Time</h2>
 
-              <li>
-                <strong>
-                  <a href="user-stories.html">User Stories &amp; Tasks</a>:
-                </strong>
-                Shows how user needs can be expressed as stories with
-                associated tasks and acceptance criteria.
-              </li>
+          <p>
+            If I were to approach a similar project again, I would place
+            even greater emphasis on confirming the project requirements
+            and expectations at the beginning. Having a clear understanding
+            of the scope, responsibilities, available information and
+            expected deliverables would help me plan my work more effectively.
+          </p>
 
-              <li>
-                <strong>
-                  <a href="product-backlog.html">Product Backlog</a>:
-                </strong>
-                Reflects my learning about organising and prioritising
-                proposed features and project work.
-              </li>
+          <p>
+            I would also aim to identify dependencies and possible delays
+            earlier, maintain a consistent record of decisions and questions,
+            and allow sufficient time for feedback and revisions. These
+            steps would help me manage my workload while keeping the project
+            documentation organised and accurate.
+          </p>
+        </section>
 
-              <li>
-                <strong>
-                  <a href="sprint-backlog.html">Sprint Backlog</a>:
-                </strong>
-                Demonstrates how selected work can be grouped around a
-                sprint goal and tracked.
-              </li>
+        <section class="reflection-subsection">
+          <h2>An Experience I Will Carry Forward</h2>
 
-              <li>
-                <strong>
-                  <a href="agile-logbook.html">Agile Logbook</a>:
-                </strong>
-                Records project progress, decisions, challenges and learning
-                throughout the placement.
-              </li>
-            </ul>
-          </section>
+          <p>
+            Overall, my placement has helped me understand that working in
+            IT involves more than developing or selecting technology. It
+            also requires understanding people, analysing problems,
+            communicating clearly and making decisions based on real needs
+            and practical circumstances.
+          </p>
 
-          <section class="reflection-subsection">
-            <h2>What I Would Approach Differently Next Time</h2>
+          <p>
+            As I continue developing professionally, I want to strengthen
+            my analytical and problem-solving abilities and become more
+            confident in contributing to projects. I will carry these
+            lessons forward into my future studies and career, particularly
+            in areas involving business analysis, systems analysis and IT
+            project management.
+          </p>
+        </section>
 
-            <p>
-              If I were to approach a similar project again, I would place
-              even greater emphasis on confirming the project requirements
-              and expectations at the beginning. Having a clear understanding
-              of the scope, responsibilities, available information and
-              expected deliverables would help me plan my work more
-              effectively.
-            </p>
+      </article>
 
-            <p>
-              I would also aim to identify dependencies and possible delays
-              earlier, maintain a consistent record of decisions and
-              questions, and allow sufficient time for feedback and revisions.
-              These steps would help me manage my workload while keeping the
-              project documentation organised and accurate.
-            </p>
-          </section>
-
-          <section class="reflection-subsection">
-            <h2>An Experience I Will Carry Forward</h2>
-
-            <p>
-              Overall, my placement has helped me understand that working in
-              IT involves more than developing or selecting technology. It
-              also requires understanding people, analysing problems,
-              communicating clearly and making decisions based on real needs
-              and practical circumstances.
-            </p>
-
-            <p>
-              As I continue developing professionally, I want to strengthen
-              my analytical and problem-solving abilities and become more
-              confident in contributing to projects. I will carry these
-              lessons forward into my future studies and career, particularly
-              in areas involving business analysis, systems analysis and IT
-              project management.
-            </p>
-          </section>
-
-        </article>
-
-        <!-- Navy return button -->
-        <a class="reflection-back" href="index.html">
-          &larr; Back to Portfolio Overview
-        </a>
-
-      </main>
-
-      <!-- Footer -->
-      <footer class="site-footer">
-        <p>
-          &copy; 2026 Nandipha Galada · Professional Practice 3
-        </p>
-
-        <p>
-          Industry Placement Portfolio
-        </p>
-      </footer>
+      <a class="back-link" href="index.html">
+        &larr; Back to Portfolio Homepage
+      </a>
 
     </div>
-  </div>
+
+    <footer class="footer">
+      <span>Professional Practice</span>
+      <span>Industry Placement Portfolio</span>
+    </footer>
+
+  </main>
 
   <script src="script.js"></script>
 </body>
