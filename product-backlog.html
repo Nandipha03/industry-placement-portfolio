@@ -12,16 +12,20 @@
       max-width: 1180px;
       margin: 0 auto;
       padding: 36px 28px 48px;
+      background: #F8F6F1;
       color: #292B28;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
     }
 
     .backlog-hero {
-      padding: 34px;
-      margin-bottom: 26px;
+      padding: 36px;
+      margin-bottom: 28px;
       border-radius: 18px;
       color: #FFFFFF;
       background: linear-gradient(135deg, #203B62, #172B47);
-      box-shadow: 0 8px 24px rgba(23, 43, 71, 0.12);
+      box-shadow: 0 8px 24px rgba(23, 43, 71, 0.13);
     }
 
     .backlog-hero .eyebrow {
@@ -34,82 +38,88 @@
     }
 
     .backlog-hero h1 {
-      margin: 0 0 14px;
-      font-size: clamp(28px, 4vw, 40px);
-      line-height: 1.2;
+      margin: 0 0 16px;
+      color: #FFFFFF;
+      font-size: clamp(30px, 4vw, 42px);
+      font-weight: 700;
+      line-height: 1.25;
     }
 
     .backlog-hero p {
-      max-width: 760px;
+      max-width: 780px;
       margin: 0;
-      color: #F1F3F6;
+      color: #FFFFFF;
       font-size: 15px;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     .backlog-meta {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-bottom: 30px;
+      gap: 16px;
+      margin-bottom: 34px;
     }
 
     .meta-card {
-      padding: 18px;
-      border: 1px solid #E5E2DA;
-      border-radius: 13px;
-      background: rgba(255, 255, 255, 0.88);
-      box-shadow: 0 4px 14px rgba(32, 59, 98, 0.04);
+      padding: 21px;
+      border: 1px solid #DCDDD5;
+      border-radius: 14px;
+      background: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(32, 59, 98, 0.05);
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
     .meta-card:hover {
       transform: translateY(-3px);
-      border-color: #A9BDA4;
+      border-color: #52684F;
     }
 
     .meta-card span {
       display: block;
       margin-bottom: 7px;
-      color: #73766F;
+      color: #52684F;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.8px;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     .meta-card strong {
       display: block;
       color: #203B62;
-      font-size: 14px;
-      line-height: 1.6;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.7;
       overflow-wrap: anywhere;
     }
 
     .backlog-section {
-      margin-top: 30px;
+      margin-top: 36px;
     }
 
     .backlog-section h2 {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
+      padding-bottom: 9px;
+      border-bottom: 2px solid #DCE6D9;
       color: #203B62;
       font-size: 23px;
-      line-height: 1.4;
+      font-weight: 700;
+      line-height: 1.5;
     }
 
     .backlog-section .section-intro {
       margin: 0 0 17px;
-      color: #62665F;
-      font-size: 14px;
-      line-height: 1.8;
+      color: #383B36;
+      font-size: 15px;
+      line-height: 1.9;
     }
 
     .backlog-panel {
       overflow: hidden;
-      border: 1px solid #E5E2DA;
-      border-radius: 15px;
+      border: 1px solid #DCDDD5;
+      border-radius: 14px;
       background: #FFFFFF;
-      box-shadow: 0 5px 18px rgba(32, 59, 98, 0.04);
+      box-shadow: 0 5px 18px rgba(32, 59, 98, 0.05);
     }
 
     .table-scroll {
@@ -120,38 +130,40 @@
     .backlog-table {
       width: 100%;
       border-collapse: collapse;
+      background: #FFFFFF;
       text-align: left;
     }
 
     .backlog-table th {
-      padding: 15px 14px;
+      padding: 16px;
       background: #203B62;
       color: #FFFFFF;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
-      line-height: 1.5;
+      line-height: 1.6;
       vertical-align: top;
     }
 
     .backlog-table td {
-      padding: 15px 14px;
-      border-bottom: 1px solid #EAE8E1;
-      color: #42463F;
-      font-size: 13px;
-      line-height: 1.7;
+      padding: 16px;
+      border-bottom: 1px solid #E4E3DD;
+      background: #FFFFFF;
+      color: #292B28;
+      font-size: 14px;
+      line-height: 1.8;
       vertical-align: top;
+    }
+
+    .backlog-table tbody tr:nth-child(even) td {
+      background: #F7F8F5;
+    }
+
+    .backlog-table tbody tr:hover td {
+      background: #EDF2EA;
     }
 
     .backlog-table tbody tr:last-child td {
       border-bottom: none;
-    }
-
-    .backlog-table tbody tr:nth-child(even) {
-      background: #FAF9F6;
-    }
-
-    .backlog-table tbody tr:hover {
-      background: #F0F4EE;
     }
 
     .backlog-table td:first-child {
@@ -167,62 +179,52 @@
     }
 
     .backlog-note {
-      margin-top: 16px;
-      padding: 16px 18px;
+      margin-top: 18px;
+      padding: 18px 20px;
       border-left: 4px solid #963F4C;
       border-radius: 0 10px 10px 0;
-      background: #F8F6F1;
-      color: #51554E;
-      font-size: 13px;
-      line-height: 1.8;
-    }
-
-    .backlog-note strong {
-      color: #203B62;
-    }
-
-    .refinement-list {
-      margin: 0;
-      padding-left: 21px;
-      color: #42463F;
+      background: #FFFFFF;
+      color: #292B28;
       font-size: 14px;
       line-height: 1.9;
     }
 
-    .refinement-list li {
-      margin-bottom: 8px;
-      padding-left: 4px;
+    .backlog-note strong {
+      color: #963F4C;
     }
 
     .reflection-panel {
-      margin-top: 30px;
-      padding: 25px;
-      border: 1px solid #E0E7DC;
+      margin-top: 36px;
+      padding: 27px;
+      border: 1px solid #D8E2D4;
       border-top: 4px solid #52684F;
       border-radius: 14px;
-      background: #F0F4EE;
+      background: #FFFFFF;
+      box-shadow: 0 5px 18px rgba(32, 59, 98, 0.04);
     }
 
     .reflection-label {
       display: inline-block;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       color: #52684F;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
     }
 
     .reflection-panel h2 {
-      margin: 0 0 12px;
+      margin: 0 0 14px;
       color: #203B62;
-      font-size: 23px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.5;
     }
 
     .reflection-panel p {
-      margin: 0 0 12px;
-      color: #42463F;
-      font-size: 14px;
+      margin: 0 0 14px;
+      color: #292B28;
+      font-size: 15px;
       line-height: 1.9;
     }
 
@@ -231,23 +233,23 @@
     }
 
     .backlog-footer {
-      margin-top: 36px;
-      padding-top: 22px;
-      border-top: 1px solid #E5E2DA;
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid #DCDDD5;
       text-align: center;
     }
 
     .backlog-footer p {
       margin: 0 0 12px;
-      color: #73766F;
-      font-size: 12px;
-      line-height: 1.7;
+      color: #454940;
+      font-size: 13px;
+      line-height: 1.8;
     }
 
     .back-link {
       display: inline-block;
       color: #203B62;
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 700;
       text-decoration: none;
     }
@@ -263,7 +265,7 @@
       }
 
       .backlog-hero {
-        padding: 25px 21px;
+        padding: 26px 22px;
       }
 
       .backlog-meta {
@@ -280,7 +282,17 @@
       }
 
       .reflection-panel {
-        padding: 20px;
+        padding: 21px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .meta-card {
+        transition: none;
+      }
+
+      .meta-card:hover {
+        transform: none;
       }
     }
 
@@ -306,7 +318,6 @@
 
       .backlog-table {
         min-width: 0;
-        font-size: 10px;
       }
 
       .backlog-table th,
@@ -345,12 +356,14 @@
 
     <section class="backlog-section">
       <h2>Understanding the Product Backlog</h2>
+
       <p class="section-intro">
         In Agile, a product backlog is an evolving list of features,
         improvements and other work that may be needed for a product.
         Items can be reviewed, prioritised and refined as the team learns
         more about user needs, technical requirements and project constraints.
       </p>
+
       <p class="section-intro">
         For this project, the backlog focuses on exploring how suitable
         operational processes could move from paper-based handling towards
@@ -361,10 +374,12 @@
 
     <section class="backlog-section">
       <h2>Proposed Product Backlog</h2>
+
       <p class="section-intro">
-        The following items are an initial proposal based on the project's
-        current direction. Priorities are provisional and should be reviewed
-        with the project team and relevant users before being treated as agreed.
+        The following items reflect the project's current direction.
+        Priorities are proposed and may be refined as the team gathers
+        more information about user needs, technical requirements and
+        organisational constraints.
       </p>
 
       <div class="backlog-panel">
@@ -410,7 +425,7 @@
                 <td>Investigate electronic forms and document handling</td>
                 <td>Could reduce repeated manual entry and make relevant documents easier to manage.</td>
                 <td class="priority">High</td>
-                <td>Requirements and authorisation needs to be established.</td>
+                <td>Requirements and authorisation needs still need to be established.</td>
               </tr>
 
               <tr>
@@ -418,7 +433,7 @@
                 <td>Explore a prototype for user interaction</td>
                 <td>Would allow potential users to assess the usability of a proposed digital workflow.</td>
                 <td class="priority">Medium</td>
-                <td>Proposed medium-term phase; not yet presented as completed.</td>
+                <td>Proposed medium-term phase.</td>
               </tr>
 
               <tr>
@@ -450,15 +465,15 @@
       </div>
 
       <div class="backlog-note">
-        <strong>Important:</strong> This is a planning backlog, not
-        a record of approved or completed system features. The proposed
-        priorities may change after survey responses, workflow analysis,
-        technical review and discussions with the project team.
+        <strong>Important:</strong> The proposed priorities may change
+        after survey responses, workflow analysis, technical review and
+        discussions with the project team.
       </div>
     </section>
 
     <section class="backlog-section">
       <h2>Backlog Refinement and Next Steps</h2>
+
       <p class="section-intro">
         Backlog refinement helps keep proposed work relevant, understandable
         and realistic as new information becomes available.
@@ -510,32 +525,33 @@
       <h2>Reflection</h2>
 
       <p>
-        Developing this product backlog has helped me understand
-        how Agile planning connects a project's overall vision to smaller
+        Developing this product backlog has helped me understand how
+        Agile planning connects a project's overall vision to smaller
         pieces of work. Rather than treating every possible feature as
         equally urgent, the backlog provides a way to organise ideas and
         consider their potential value to users.
       </p>
 
       <p>
-        At this stage, the proposed items still need to be tested against
-        actual user needs and the organisation's requirements. The ICCV
-        survey has been prepared, but it has not yet been distributed.
-        This means that the current backlog is a starting point rather
-        than a final list of confirmed requirements.
+        The proposed items still need to be considered against actual
+        user needs and the organisation's requirements. The ICCV survey
+        has been prepared, but it has not yet been distributed. This
+        reminds me that planning must remain flexible until more evidence
+        is available.
       </p>
 
       <p>
-        My next learning step is to use the feedback and information
-        gathered during the project to help refine the backlog. This will
-        support more informed prioritisation and help distinguish between
-        ideas that are useful, technically practical and ready for further
+        My next learning step is to use feedback and information gathered
+        during the project to help refine the backlog. This will support
+        more informed prioritisation and help distinguish between ideas
+        that are useful, technically practical and ready for further
         consideration.
       </p>
     </section>
 
     <footer class="backlog-footer">
       <p>Professional Practice 3 · Industry Placement Portfolio</p>
+
       <a class="back-link" href="index.html">
         &larr; Return to portfolio homepage
       </a>
