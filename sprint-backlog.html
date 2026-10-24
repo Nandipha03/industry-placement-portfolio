@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Proposed sprint backlog for the ICCV Digital Platform Management project at JICS."
+  >
+
+  <title>Sprint Backlog | Nandipha Galada</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .sprint-page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 36px 28px 48px;
+      color: #292B28;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .sprint-hero {
+      background: linear-gradient(135deg, #172B47, #203B62);
+      color: #FFFFFF;
+      padding: 38px;
+      border-radius: 18px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 24px rgba(23, 43, 71, 0.12);
+    }
+
+    .sprint-eyebrow {
+      color: #DCE6D9;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .sprint-hero h1 {
+      color: #FFFFFF;
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+      margin: 0 0 16px;
+    }
+
+    .sprint-hero p {
+      color: #FFFFFF;
+      margin: 0;
+      max-width: 850px;
+    }
+
+    .sprint-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .sprint-meta-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E2DA;
+      border-left: 5px solid #52684F;
+      border-radius: 12px;
+      padding: 18px 22px;
+      box-shadow: 0 4px 14px rgba(23, 43, 71, 0.04);
+    }
+
+    .sprint-meta-card span {
+      display: block;
+      color: #52684F;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .sprint-meta-card strong {
+      color: #203B62;
+      font-size: 16px;
+    }
+
+    .sprint-section {
+      margin-top: 32px;
+    }
+
+    .sprint-section h2 {
+      color: #203B62;
+      font-size: 24px;
+      line-height: 1.35;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #DCE6D9;
+      margin: 0 0 16px;
+    }
+
+    .sprint-section h3 {
+      color: #203B62;
+      font-size: 18px;
+      margin: 22px 0 10px;
+    }
+
+    .sprint-section p {
+      margin: 0 0 14px;
+    }
+
+    .sprint-goal {
+      background: #FFFFFF;
+      border: 1px solid #DCE6D9;
+      border-left: 6px solid #52684F;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+    }
+
+    .sprint-goal h3 {
+      margin: 0 0 8px;
+      color: #203B62;
+    }
+
+    .sprint-goal p {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .sprint-note {
+      background: #F1E4E4;
+      border-left: 5px solid #963F4C;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: #292B28;
+    }
+
+    .sprint-note strong {
+      color: #963F4C;
+    }
+
+    .sprint-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid #E5E2DA;
+      border-radius: 12px;
+      background: #FFFFFF;
+      margin: 18px 0;
+    }
+
+    .sprint-table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      background: #FFFFFF;
+    }
+
+    .sprint-table th {
+      background: #203B62;
+      color: #FFFFFF;
+      text-align: left;
+      padding: 15px 14px;
+      font-size: 13px;
+      line-height: 1.5;
+      vertical-align: top;
+    }
+
+    .sprint-table td {
+      padding: 15px 14px;
+      border-bottom: 1px solid #E5E2DA;
+      color: #292B28;
+      vertical-align: top;
+      line-height: 1.7;
+    }
+
+    .sprint-table tbody tr:nth-child(even) {
+      background: #F3F6F1;
+    }
+
+    .sprint-table tbody tr:hover {
+      background: #E7EEE3;
+    }
+
+    .sprint-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .sprint-table td:first-child {
+      color: #203B62;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .sprint-table td strong {
+      color: #203B62;
+    }
+
+    .sprint-status {
+      display: inline-block;
+      padding: 4px 9px;
+      border-radius: 6px;
+      font-size: 12px;
+      line-height: 1.5;
+      font-weight: bold;
+      white-space: normal;
+    }
+
+    .status-complete {
+      background: #DCE6D9;
+      color: #30492F;
+    }
+
+    .status-pending {
+      background: #F1E4E4;
+      color: #81333F;
+    }
+
+    .status-planned {
+      background: #E8EDF5;
+      color: #203B62;
+    }
+
+    .sprint-list {
+      padding-left: 24px;
+      margin: 12px 0;
+    }
+
+    .sprint-list li {
+      padding-left: 4px;
+      margin-bottom: 9px;
+    }
+
+    .sprint-reflection {
+      background: #FFFFFF;
+      border: 1px solid #E5E2DA;
+      border-top: 5px solid #52684F;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 32px;
+      box-shadow: 0 4px 14px rgba(23, 43, 71, 0.04);
+    }
+
+    .sprint-reflection h2 {
+      color: #203B62;
+      font-size: 23px;
+      margin: 0 0 12px;
+    }
+
+    .sprint-reflection p {
+      margin: 0 0 12px;
+    }
+
+    .sprint-reflection p:last-child {
+      margin-bottom: 0;
+    }
+
+    .sprint-footer {
+      text-align: center;
+      padding: 28px 10px 0;
+      margin-top: 40px;
+      border-top: 1px solid #D9D6CE;
+      color: #292B28;
+      font-size: 13px;
+    }
+
+    .sprint-footer p {
+      margin: 0 0 8px;
+    }
+
+    .sprint-footer .back-link {
+      color: #203B62;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .sprint-footer .back-link:hover {
+      color: #963F4C;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .sprint-page {
+        padding: 22px 15px 32px;
+      }
+
+      .sprint-hero {
+        padding: 26px 21px;
+        border-radius: 14px;
+      }
+
+      .sprint-meta {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .sprint-section h2 {
+        font-size: 21px;
+      }
+
+      .sprint-goal,
+      .sprint-reflection {
+        padding: 19px;
+      }
+    }
+
+    @media print {
+      .sprint-page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .sprint-hero {
+        background: #203B62 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .sprint-table-wrap {
+        overflow: visible;
+      }
+
+      .sprint-table {
+        min-width: 0;
+        font-size: 10px;
+      }
+
+      .sprint-table th,
+      .sprint-table td {
+        padding: 7px;
+        overflow-wrap: anywhere;
+      }
+
+      .sprint-footer .back-link {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="sprint-page">
+
+    <header class="sprint-hero">
+      <p class="sprint-eyebrow">Agile Deliverable 04</p>
+
+      <h1>Sprint Backlog</h1>
+
+      <p>
+        This proposed sprint plan outlines the work needed to develop
+        a clearer understanding of ICCVs' operational challenges and
+        use the findings to guide priorities for the proposed digital
+        platform at the Judicial Inspectorate for Correctional Services
+        (JICS).
+      </p>
+    </header>
+
+    <section class="sprint-meta" aria-label="Project information">
+
+      <div class="sprint-meta-card">
+        <span>Project</span>
+        <strong>ICCV Digital Platform Management</strong>
+      </div>
+
+      <div class="sprint-meta-card">
+        <span>Organisation</span>
+        <strong>Judicial Inspectorate for Correctional Services (JICS)</strong>
+      </div>
+
+    </section>
+
+    <section class="sprint-section">
+      <h2>1. Purpose of the Sprint Backlog</h2>
+
+      <p>
+        A Sprint Backlog identifies the work selected for a sprint,
+        the tasks needed to achieve its goal and the expected outputs.
+        It helps the team organise its work, monitor progress and
+        identify obstacles that may affect delivery.
+      </p>
+
+      <p>
+        For this project, the proposed focus is on understanding the
+        current ICCV workflow and gathering reliable information about
+        the challenges experienced during daily operations. This
+        information will help the team make informed decisions about
+        which problems should receive priority.
+      </p>
+
+      <div class="sprint-note">
+        <strong>Planning note:</strong>
+        A formal sprint schedule has not been confirmed. This page
+        therefore presents a proposed sprint plan based on the
+        project's current progress, rather than claiming that a
+        formal sprint has already been completed.
+      </div>
+    </section>
+
+    <section class="sprint-section">
+      <h2>2. Proposed Sprint Goal</h2>
+
+      <div class="sprint-goal">
+        <h3>Our focus</h3>
+
+        <p>
+          Establish a clearer, evidence-based understanding of ICCVs'
+          operational challenges so that the team can identify
+          priorities and guide the next stages of the proposed
+          digital platform.
+        </p>
+      </div>
+
+      <p>
+        The survey is an important part of this goal because it is
+        intended to collect information directly from ICCVs about
+        their duties, existing processes, administrative challenges
+        and use of digital tools.
+      </p>
+    </section>
+
+    <section class="sprint-section">
+      <h2>3. Proposed Sprint Tasks</h2>
+
+      <p>
+        The following tasks are organised around the project's current
+        needs. Priorities and progress may change as the team gathers
+        more information and addresses access challenges.
+      </p>
+
+      <div class="sprint-table-wrap">
+        <table class="sprint-table">
+          <thead>
+            <tr>
+              <th scope="col">Task ID</th>
+              <th scope="col">Task</th>
+              <th scope="col">Expected Output</th>
+              <th scope="col">Priority</th>
+              <th scope="col">Current Progress</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>SB-01</td>
+
+              <td>
+                Review and finalise the ICCV survey questions.
+              </td>
+
+              <td>
+                Survey questions aligned with ICCVs' actual duties
+                and operational processes.
+              </td>
+
+              <td>High</td>
+
+              <td>
+                <span class="sprint-status status-complete">
+                  Completed
+                </span>
+                <br>
+                The team reviewed, corrected and restructured the
+                questions during a meeting.
+              </td>
+            </tr>
+
+            <tr>
+              <td>SB-02</td>
+
+              <td>
+                Investigate how ICCVs can reliably access and receive
+                the survey.
+              </td>
+
+              <td>
+                A practical distribution approach that considers
+                organisational email and SIM-card access challenges.
+              </td>
+
+              <td>High</td>
+
+              <td>
+                <span class="sprint-status status-pending">
+                  Pending
+                </span>
+                <br>
+                Access remains a concern and needs to be addressed.
+              </td>
+            </tr>
+
+            <tr>
+              <td>SB-03</td>
+
+              <td>
+                Distribute the survey and encourage participation
+                from the intended users.
+              </td>
+
+              <td>
+                Survey responses from participating ICCVs that can
+                inform the project's understanding of their needs.
+              </td>
+
+              <td>High</td>
+
+              <td>
+                <span class="sprint-status status-pending">
+                  Awaiting distribution
+                </span>
+                <br>
+                The survey has been prepared but has not yet been
+                distributed.
+              </td>
+            </tr>
+
+            <tr>
+              <td>SB-04</td>
+
+              <td>
+                Review the survey responses together as a team.
+              </td>
+
+              <td>
+                A shared understanding of the challenges reported
+                by respondents and the frequency of recurring issues.
+              </td>
+
+              <td>High</td>
+
+              <td>
+                <span class="sprint-status status-planned">
+                  Planned
+                </span>
+                <br>
+                This task depends on receiving survey responses.
+              </td>
+            </tr>
+
+            <tr>
+              <td>SB-05</td>
+
+              <td>
+                Document and summarise the survey findings.
+              </td>
+
+              <td>
+                A report supported by response counts, relevant
+                statistics and documented pain points.
+              </td>
+
+              <td>High</td>
+
+              <td>
+                <span class="sprint-status status-planned">
+                  Planned
+                </span>
+                <br>
+                Findings and statistics will be determined from
+                the actual responses.
+              </td>
+            </tr>
+
+            <tr>
+              <td>SB-06</td>
+
+              <td>
+                Review the user stories and proposed backlog priorities
+                using the evidence collected.
+              </td>
+
+              <td>
+                Refined user stories and priorities that reflect
+                identified user needs.
+              </td>
+
+              <td>High</td>
+
+              <td>
+                <span class="sprint-status status-planned">
+                  Planned
+                </span>
+                <br>
+                The initial user stories and backlog are prepared
+                for further refinement.
+              </td>
+            </tr>
+
+            <tr>
+              <td>SB-07</td>
+
+              <td>
+                Present the documented findings and discuss possible
+                next steps with the project team and relevant
+                stakeholders.
+              </td>
+
+              <td>
+                A shared understanding of the main problems and
+                an evidence-informed basis for future decisions.
+              </td>
+
+              <td>Medium</td>
+
+              <td>
+                <span class="sprint-status status-planned">
+                  Planned
+                </span>
+                <br>
+                The presentation and next steps will depend on
+                the findings and stakeholder discussions.
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="sprint-section">
+      <h2>4. Dependencies and Possible Obstacles</h2>
+
+      <p>
+        Some tasks depend on earlier activities being completed.
+        Identifying these dependencies helps the team understand
+        what may delay progress and what needs attention first.
+      </p>
+
+      <ul class="sprint-list">
+        <li>
+          <strong>Survey access:</strong>
+          Organisational email and SIM-card access difficulties may
+          prevent some ICCVs from receiving or completing the survey.
+        </li>
+
+        <li>
+          <strong>Availability of evidence:</strong>
+          The team cannot accurately measure how frequently particular
+          problems occur until responses have been collected and
+          analysed.
+        </li>
+
+        <li>
+          <strong>Prioritisation:</strong>
+          User stories and backlog priorities may need to change
+          once the team's understanding of the actual pain points
+          improves.
+        </li>
+
+        <li>
+          <strong>Stakeholder input:</strong>
+          Proposed solutions will require further discussion and
+          consideration before implementation decisions are made.
+        </li>
+      </ul>
+
+      <div class="sprint-note">
+        <strong>Important:</strong>
+        No survey findings or response statistics are available yet.
+        The team must use actual responses to support future conclusions
+        rather than treating anticipated problems as confirmed results.
+      </div>
+    </section>
+
+    <section class="sprint-section">
+      <h2>5. How Progress Will Be Evaluated</h2>
+
+      <p>
+        Progress can be reviewed by checking whether the planned
+        outputs have been produced and whether the team has the
+        information needed to move forward.
+      </p>
+
+      <ul class="sprint-list">
+        <li>The survey questions reflect ICCVs' actual responsibilities.</li>
+
+        <li>
+          A workable method of distributing the survey has been
+          identified and used.
+        </li>
+
+        <li>
+          Responses have been collected and reviewed collaboratively.
+        </li>
+
+        <li>
+          Findings are documented clearly and supported by the
+          available evidence.
+        </li>
+
+        <li>
+          User stories and backlog priorities are reviewed against
+          the identified needs.
+        </li>
+      </ul>
+
+      <p>
+        These are proposed evaluation points. They will be assessed
+        as the related activities take place.
+      </p>
+    </section>
+
+    <section class="sprint-reflection">
+      <h2>Learning and Development</h2>
+
+      <p>
+        Developing this proposed Sprint Backlog helped me understand
+        the importance of breaking a larger project into manageable
+        tasks and identifying the dependencies between them. Preparing
+        the survey is an important step, but the information gathered
+        from ICCVs will be needed before the team can confidently
+        determine the extent of the problems and decide which areas
+        deserve the most attention.
+      </p>
+
+      <p>
+        I also learned that documenting progress, obstacles and
+        decisions can help a team remain organised and explain why
+        particular priorities were chosen. Reviewing the evidence
+        together will allow the team to refine its plans instead
+        of relying only on assumptions. This reflects the iterative
+        nature of Agile, where plans can be adjusted as more
+        information becomes available.
+      </p>
+    </section>
+
+    <footer class="sprint-footer">
+      <p>Professional Practice 3 · Industry Placement Portfolio</p>
+
+      <a class="back-link" href="index.html">
+        &larr; Return to portfolio homepage
+      </a>
+    </footer>
+
+  </main>
+
+</body>
+</html>
