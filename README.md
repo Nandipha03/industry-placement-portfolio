@@ -41,5 +41,7 @@ My interests include business analysis, systems analysis, UX/UI design, and IT p
 ---
 
 **Cape Peninsula University of Technology**
+
 Diploma in ICT Applications Development
+
 Professional Practice 3 | 2026
