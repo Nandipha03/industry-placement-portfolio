@@ -1,50 +1,45 @@
-# ✦ Nandipha Galada | Industry Placement Portfolio
+# Nandipha Galada
 
-**Professional Practice 3 · ICT Applications Development**
+### Professional Practice 3 | Industry Placement Portfolio
 
-> Connecting what I learn in the classroom with what happens in the real world.
+*Bridging academic learning with professional experience.*
 
-## 👋 A Little About Me
+## About Me
 
-I'm Nandipha Galada, a third-year ICT Applications Development student at Cape Peninsula University of Technology (CPUT).
+I am a third-year ICT Applications Development student at Cape Peninsula University of Technology (CPUT). This portfolio documents my learning and professional development during my industry placement at the Judicial Inspectorate for Correctional Services (JICS).
 
-This portfolio documents my learning and professional development during my industry placement at the **Judicial Inspectorate for Correctional Services (JICS)**. It brings together my project work, planning activities, reflections, and the skills I'm developing along the way.
+It showcases my project activities, Agile documentation, and reflections on applying my academic knowledge in a professional environment.
 
-## 💡 What I'm Working On
+## Industry Placement Project
 
-My placement project focuses on exploring an **ICCV Job Management Platform** — a proposed digital solution aimed at improving how work activities and information are managed.
+My placement involves exploring an **ICCV Job Management Platform**, a proposed digital solution intended to improve the management of work activities and information.
 
-Through this project, I'm learning to look beyond the technology itself and consider the people, processes, and challenges that a useful digital solution needs to address.
+The project has allowed me to consider existing processes, identify potential areas for improvement, and explore how technology can better support users and their daily responsibilities.
 
-## 📂 Explore My Portfolio
+## Portfolio Contents
 
-| Section | What's Inside |
-|---|---|
-| 🏠 Overview | An introduction to my placement and project |
-| 🤝 Agile Team Charter | The project's purpose, roles, and working agreements |
-| 📝 User Stories & Tasks | User needs translated into project requirements |
-| 📋 Product Backlog | Proposed features and prioritised work |
-| 🎯 Sprint Backlog | Work selected for a sprint |
-| 📖 Agile Logbook | Project activities, progress, and learning |
-| 💭 Overall Reflection | My development, challenges, and key takeaways |
+| Section              | Description                                                |
+| -------------------- | ---------------------------------------------------------- |
+| Overview             | Introduction to my placement and project                   |
+| Agile Team Charter   | Project purpose, roles, and working agreements             |
+| User Stories & Tasks | User needs, requirements, and associated tasks             |
+| Product Backlog      | Proposed features and prioritised work                     |
+| Sprint Backlog       | Selected work planned for a sprint                         |
+| Agile Logbook        | Project activities, progress, and learning                 |
+| Overall Reflection   | Personal and professional development during the placement |
 
-## 🌱 What I'm Learning
+## Skills and Development
 
-This experience is helping me develop my understanding of:
+Throughout this experience, I am developing my understanding of requirements analysis, Agile project planning, documentation, problem-solving, and professional communication.
 
-- Requirements analysis and understanding user needs
-- Agile project planning and documentation
-- Problem-solving and critical thinking
-- Professional communication and collaboration
-- The role of technology in improving everyday processes
+I am also learning the importance of understanding user needs and existing processes before proposing technological solutions.
 
-## 🚀 Looking Ahead
+## Career Interests
 
-I'm interested in growing my skills in business analysis, systems analysis, UX/UI, and IT project management.
-
-This portfolio is part of that journey — documenting not only what I work on, but also what I learn and how I grow.
+My interests include business analysis, systems analysis, UX/UI design, and IT project management. I hope to continue developing the analytical, communication, and technical skills needed to contribute meaningfully to future projects.
 
 ---
 
-**Built as part of Professional Practice 3**  
-*ICT Applications Development · CPUT*
+**Cape Peninsula University of Technology**
+Diploma in ICT Applications Development
+Professional Practice 3 | 2026
