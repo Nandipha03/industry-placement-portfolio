@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Agile logbook documenting project activities, progress, challenges and learning during the JICS industry placement."
+  >
+
+  <title>Agile Logbook | Nandipha Galada</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .logbook-page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 36px 28px 48px;
+      color: #292B28;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .logbook-hero {
+      background: linear-gradient(135deg, #172B47, #203B62);
+      color: #FFFFFF;
+      padding: 38px;
+      border-radius: 18px;
+      margin-bottom: 28px;
+      box-shadow: 0 8px 24px rgba(23, 43, 71, 0.12);
+    }
+
+    .logbook-eyebrow {
+      color: #DCE6D9;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
+
+    .logbook-hero h1 {
+      color: #FFFFFF;
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+      margin: 0 0 16px;
+    }
+
+    .logbook-hero p {
+      color: #FFFFFF;
+      margin: 0;
+      max-width: 850px;
+    }
+
+    .logbook-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .logbook-meta-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E2DA;
+      border-left: 5px solid #52684F;
+      border-radius: 12px;
+      padding: 18px 22px;
+      box-shadow: 0 4px 14px rgba(23, 43, 71, 0.04);
+    }
+
+    .logbook-meta-card span {
+      display: block;
+      color: #52684F;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .logbook-meta-card strong {
+      color: #203B62;
+      font-size: 16px;
+    }
+
+    .logbook-section {
+      margin-top: 32px;
+    }
+
+    .logbook-section h2 {
+      color: #203B62;
+      font-size: 24px;
+      line-height: 1.35;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #DCE6D9;
+      margin: 0 0 16px;
+    }
+
+    .logbook-section h3 {
+      color: #203B62;
+      font-size: 18px;
+      margin: 22px 0 10px;
+    }
+
+    .logbook-section p {
+      margin: 0 0 14px;
+    }
+
+    .logbook-note {
+      background: #F1E4E4;
+      border-left: 5px solid #963F4C;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: #292B28;
+    }
+
+    .logbook-note strong {
+      color: #963F4C;
+    }
+
+    .logbook-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid #E5E2DA;
+      border-radius: 12px;
+      background: #FFFFFF;
+      margin: 18px 0;
+    }
+
+    .logbook-table {
+      width: 100%;
+      min-width: 900px;
+      border-collapse: collapse;
+      background: #FFFFFF;
+    }
+
+    .logbook-table th {
+      background: #203B62;
+      color: #FFFFFF;
+      text-align: left;
+      padding: 15px 14px;
+      font-size: 13px;
+      line-height: 1.5;
+      vertical-align: top;
+    }
+
+    .logbook-table td {
+      padding: 15px 14px;
+      border-bottom: 1px solid #E5E2DA;
+      color: #292B28;
+      vertical-align: top;
+      line-height: 1.7;
+    }
+
+    .logbook-table tbody tr:nth-child(even) {
+      background: #F3F6F1;
+    }
+
+    .logbook-table tbody tr:hover {
+      background: #E7EEE3;
+    }
+
+    .logbook-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .logbook-table td:first-child {
+      color: #203B62;
+      font-weight: bold;
+    }
+
+    .logbook-table td strong {
+      color: #203B62;
+    }
+
+    .logbook-reflection {
+      background: #FFFFFF;
+      border: 1px solid #E5E2DA;
+      border-top: 5px solid #52684F;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 32px;
+      box-shadow: 0 4px 14px rgba(23, 43, 71, 0.04);
+    }
+
+    .logbook-reflection h2 {
+      color: #203B62;
+      font-size: 23px;
+      margin: 0 0 12px;
+    }
+
+    .logbook-reflection p {
+      margin: 0 0 12px;
+    }
+
+    .logbook-reflection p:last-child {
+      margin-bottom: 0;
+    }
+
+    .logbook-next-steps {
+      background: #FFFFFF;
+      border: 1px solid #DCE6D9;
+      border-radius: 12px;
+      padding: 22px 24px;
+      margin-top: 24px;
+    }
+
+    .logbook-next-steps h3 {
+      margin-top: 0;
+    }
+
+    .logbook-next-steps ul {
+      padding-left: 22px;
+      margin-bottom: 0;
+    }
+
+    .logbook-next-steps li {
+      margin-bottom: 8px;
+    }
+
+    .logbook-footer {
+      text-align: center;
+      padding: 28px 10px 0;
+      margin-top: 40px;
+      border-top: 1px solid #D9D6CE;
+      color: #292B28;
+      font-size: 13px;
+    }
+
+    .logbook-footer p {
+      margin: 0 0 8px;
+    }
+
+    .logbook-footer .back-link {
+      color: #203B62;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .logbook-footer .back-link:hover {
+      color: #963F4C;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .logbook-page {
+        padding: 22px 15px 32px;
+      }
+
+      .logbook-hero {
+        padding: 26px 21px;
+        border-radius: 14px;
+      }
+
+      .logbook-meta {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .logbook-section h2 {
+        font-size: 21px;
+      }
+
+      .logbook-reflection,
+      .logbook-next-steps {
+        padding: 19px;
+      }
+    }
+
+    @media print {
+      .logbook-page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .logbook-hero {
+        background: #203B62 !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+
+      .logbook-table-wrap {
+        overflow: visible;
+      }
+
+      .logbook-table {
+        min-width: 0;
+        font-size: 10px;
+      }
+
+      .logbook-table th,
+      .logbook-table td {
+        padding: 7px;
+        overflow-wrap: anywhere;
+      }
+
+      .logbook-footer .back-link {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="logbook-page">
+
+    <header class="logbook-hero">
+      <p class="logbook-eyebrow">Agile Deliverable 05</p>
+
+      <h1>Agile Logbook</h1>
+
+      <p>
+        This logbook records key project activities, progress,
+        challenges and learning during the development of the
+        proposed ICCV digital platform at the Judicial Inspectorate
+        for Correctional Services (JICS). It reflects the project's
+        current stage and identifies the next steps as more
+        information becomes available.
+      </p>
+    </header>
+
+    <section class="logbook-meta" aria-label="Project information">
+
+      <div class="logbook-meta-card">
+        <span>Project</span>
+        <strong>ICCV Digital Platform Management</strong>
+      </div>
+
+      <div class="logbook-meta-card">
+        <span>Organisation</span>
+        <strong>Judicial Inspectorate for Correctional Services (JICS)</strong>
+      </div>
+
+    </section>
+
+    <section class="logbook-section">
+      <h2>1. Purpose of the Logbook</h2>
+
+      <p>
+        An Agile Logbook provides a record of project activities,
+        decisions, progress, challenges and lessons learned. It
+        helps the team keep track of what has happened, understand
+        obstacles and identify actions that may be needed next.
+      </p>
+
+      <p>
+        This logbook documents the work undertaken so far, including
+        the preparation of the ICCV survey and the development of
+        project planning deliverables. It also records activities
+        that remain dependent on survey distribution, responses
+        and further team discussions.
+      </p>
+
+      <div class="logbook-note">
+        <strong>Record-keeping note:</strong>
+        The entries below describe known project activities and
+        current progress. Exact dates have not been included where
+        they have not been confirmed. Future activities are
+        identified as planned rather than completed.
+      </div>
+    </section>
+
+    <section class="logbook-section">
+      <h2>2. Project Activity Log</h2>
+
+      <p>
+        The following table summarises the main activities,
+        observations and next steps throughout the current
+        project planning stage.
+      </p>
+
+      <div class="logbook-table-wrap">
+        <table class="logbook-table">
+
+          <thead>
+            <tr>
+              <th scope="col">Activity</th>
+              <th scope="col">Work and Observations</th>
+              <th scope="col">Progress or Learning</th>
+              <th scope="col">Next Step</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Understanding the project</td>
+
+              <td>
+                Explored the need to understand ICCVs' existing
+                responsibilities, administrative processes and
+                challenges before deciding how a digital solution
+                could support their work.
+              </td>
+
+              <td>
+                Identified the importance of understanding the
+                current workflow and the needs of the people
+                expected to use a proposed solution.
+              </td>
+
+              <td>
+                Continue investigating current processes and
+                gather information from intended users.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Survey preparation</td>
+
+              <td>
+                Prepared questions covering ICCVs' duties, current
+                processes, record-keeping, administrative challenges
+                and use of tablets and digital tools.
+              </td>
+
+              <td>
+                Developed a way to gather information directly
+                from intended users rather than relying only
+                on assumptions.
+              </td>
+
+              <td>
+                Distribute the survey once a workable approach
+                to user access has been established.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Survey review meeting</td>
+
+              <td>
+                The team reviewed the survey questions, corrected
+                them and restructured them to better reflect
+                the actual responsibilities and work of ICCVs.
+              </td>
+
+              <td>
+                Learned that questions need to match the users'
+                real working context if the responses are to
+                provide useful evidence.
+              </td>
+
+              <td>
+                Use the reviewed survey to gather information
+                once distribution can proceed.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Identifying a distribution obstacle</td>
+
+              <td>
+                Organisational email access and SIM-card-related
+                difficulties were identified as concerns that
+                could prevent some ICCVs from receiving or
+                accessing the survey.
+              </td>
+
+              <td>
+                Recognised that preparing a survey is not enough;
+                the team must also consider whether intended
+                participants can access it.
+              </td>
+
+              <td>
+                Investigate a practical distribution approach
+                with the relevant team members.
+              </td>
+            </tr>
+
+            <tr>
+              <td>User stories and tasks</td>
+
+              <td>
+                Developed initial user stories and related tasks
+                to describe potential user needs and activities
+                associated with the proposed platform.
+              </td>
+
+              <td>
+                Improved my understanding of how project
+                requirements can be expressed from a user's
+                perspective.
+              </td>
+
+              <td>
+                Refine the stories as survey responses and
+                additional workflow information become available.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Product backlog development</td>
+
+              <td>
+                Organised proposed project activities and
+                potential features into a product backlog,
+                with provisional priorities.
+              </td>
+
+              <td>
+                Learned that a backlog helps organise possible
+                work, but priorities may need to change when
+                new evidence is available.
+              </td>
+
+              <td>
+                Review and adjust priorities after the team
+                has analysed the survey findings and assessed
+                relevant requirements.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Sprint planning</td>
+
+              <td>
+                Prepared a proposed sprint plan outlining tasks
+                for survey distribution, response analysis,
+                documenting findings and reviewing priorities.
+              </td>
+
+              <td>
+                Improved my understanding of task dependencies
+                and the importance of distinguishing planned
+                activities from completed work.
+              </td>
+
+              <td>
+                Update the plan as the team confirms its
+                next activities and progress.
+              </td>
+            </tr>
+
+            <tr>
+              <td>Survey analysis and stakeholder reporting</td>
+
+              <td>
+                Identified response analysis, documenting
+                recurring pain points and preparing a report
+                as future project activities.
+              </td>
+
+              <td>
+                Recognised that documented findings and
+                response statistics can help the team explain
+                which challenges require attention.
+              </td>
+
+              <td>
+                Review the actual responses collaboratively,
+                document the results and use the findings
+                to inform future discussions.
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+      </div>
+    </section>
+
+    <section class="logbook-section">
+      <h2>3. Current Challenges and Lessons Learned</h2>
+
+      <h3>Access to intended users</h3>
+
+      <p>
+        One of the main challenges is ensuring that ICCVs can
+        receive and access the survey. Organisational email and
+        SIM-card-related difficulties may affect participation.
+        This has highlighted the importance of considering
+        accessibility when planning project activities.
+      </p>
+
+      <h3>Using evidence to guide priorities</h3>
+
+      <p>
+        Although the team has identified potential operational
+        challenges, the survey responses are needed to understand
+        how frequently particular issues occur and how users
+        experience them. Recording and analysing this information
+        will help the team make more informed decisions about
+        which problems to address first.
+      </p>
+
+      <h3>Collaboration and documentation</h3>
+
+      <p>
+        Reviewing and restructuring the survey as a team
+        demonstrated the value of discussing work, correcting
+        weaknesses and improving deliverables together.
+        Documenting activities and decisions can also help
+        the team maintain a shared understanding of progress
+        and explain the reasons behind future priorities.
+      </p>
+    </section>
+
+    <section class="logbook-section">
+      <h2>4. Planned Next Steps</h2>
+
+      <div class="logbook-next-steps">
+
+        <h3>Moving the project forward</h3>
+
+        <ul>
+          <li>
+            Investigate and address the barriers affecting
+            survey distribution.
+          </li>
+
+          <li>
+            Distribute the prepared survey and collect responses
+            from participating ICCVs.
+          </li>
+
+          <li>
+            Review the responses collaboratively and identify
+            recurring challenges and relevant statistics.
+          </li>
+
+          <li>
+            Document the findings in a report that can support
+            discussions with project stakeholders.
+          </li>
+
+          <li>
+            Review the user stories and proposed backlog
+            priorities against the evidence collected.
+          </li>
+
+          <li>
+            Continue documenting project activities, decisions,
+            obstacles and learning as the work progresses.
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <section class="logbook-reflection">
+      <h2>Learning and Development</h2>
+
+      <p>
+        Working on this project has helped me understand the
+        importance of planning, collaboration and documenting
+        progress throughout a project. Preparing the survey
+        showed me that requirements need to reflect the actual
+        work and experiences of intended users. Reviewing the
+        questions as a team also highlighted the value of
+        feedback and making improvements before moving forward.
+      </p>
+
+      <p>
+        I have also learned that identifying a possible problem
+        is only the beginning. The team needs reliable information
+        to understand the extent of the problem and decide which
+        areas should receive priority. This makes documentation
+        and evidence-based decision-making important parts of
+        the process.
+      </p>
+
+      <p>
+        Although the project has not followed a confirmed formal
+        sprint schedule, preparing the Agile deliverables has
+        helped me understand how work can be organised into
+        manageable tasks and refined as new information becomes
+        available. Going forward, I want to improve how I record
+        project activities and reflect on what each stage teaches
+        me about working in an IT team.
+      </p>
+    </section>
+
+    <footer class="logbook-footer">
+      <p>Professional Practice 3 · Industry Placement Portfolio</p>
+
+      <a class="back-link" href="index.html">
+        &larr; Return to portfolio homepage
+      </a>
+    </footer>
+
+  </main>
+
+</body>
+</html>
